@@ -1,28 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.ARFoundation;
+using UnityEngine.XR.ARSubsystems;
 
 public class TouchInput : MonoBehaviour
 {
     public bool IsTouch { get; private set; }
     private int IsZoom;
-    private Vector3 TouchPosition;
     private float TouchPositionX;
     private float TouchPositionY;
     private float TouchPositionZ;
     private int _touchCount;
 
-    // 더 추가할게 있나...일단 터치 포지션 각 축별로 받고
-    // +터치 포지션 OnScreen으로 화면내 좌표값 반환 함수 만들어야 하고
-    // 터치 슬라이드 구현..터치중인 손가락이 몇개인지..
-    // 줌 인 아웃은 지금 구현중이었고..+슬라이드로 쓰다듬는거 구현해놔야하고
-    // 어............어........또 뭘 구현해놔야 하지.....뭐 구현해놓으면 편하지....
-    // 
-    // 내일...오디오매니저 스크립트로 CSV로 파일명까지 입력받아서 파일 로드, 리스트에 넣어놓는 스크립트까지 짜놓자
-    // 오디오소스도 배열로 미리 만들어서 선택적으로 여러개 재생할 수 있도록 틀은 마련해야 할 듯..
-    // 엄....엄.....엄.......음...어....어.... 그거 뭐지 그거 그거 그거 그거.....무ㅕ였지 생각이 안난다
-    // 어..................................................................................................
-    // .....................................몰루 집갈려
+    [SerializeField] private ARRaycastManager arRaycaster;
+
+    private void Update() 
+    {
+        
+    }
 
     public int GetTouchCount()
     {
@@ -36,22 +32,25 @@ public class TouchInput : MonoBehaviour
 
     public Vector3 GetTouchPosition()
     {
-        return TouchPosition;
+        return new Vector3(TouchPositionX, TouchPositionY, TouchPositionZ);
     }
 
-    public float GetTouchPositionAxis(string Axis)
+    /// <summary>
+    /// 월드기준 터치 좌표중 한 개의 축을 반환 ('x', 'y', 'z'), 그 외를 입력할 경우 0 반환
+    /// </summary>
+    public float GetTouchPositionAxis(char Axis)
     {
         float data;
 
         switch(Axis)
         {
-            case "x":
+            case 'x':
                 data = TouchPositionX;
                 break;
-            case "y":
+            case 'y':
                 data = TouchPositionY;
                 break;
-            case "z":
+            case 'z':
                 data = TouchPositionZ;
                 break;
             default :
@@ -62,33 +61,44 @@ public class TouchInput : MonoBehaviour
         return data;
     }
 
-    private void RaycastPosition()
+    private void RaycastOnPlane(Vector3 touchPosition)
     {
+        Touch touch = Input.GetTouch(0);
+        if(touch.phase == TouchPhase.Began)
+        {
+            List<ARRaycastHit> hits = new List<ARRaycastHit>();
 
+            if(arRaycaster.Raycast(touchPosition, hits, TrackableType.Planes))
+            {
+                Pose FirstHit = hits[0].pose;
+                TouchPositionX = FirstHit.position.x;
+                TouchPositionY = FirstHit.position.y;
+                TouchPositionZ = FirstHit.position.z;
+            }
+        }
     }
 
     private void GetSlide(Touch touchPoint)
     {
+        if(Input.touchCount == 1)
+        {
 
+        }
     }
 
     private void Zoom()
     {
-        if (Input.touchCount == 2) //손가락 2개가 눌렸을 때
+        if (Input.touchCount == 2)
         {
-            Touch FirstTouch = Input.GetTouch(0); //첫번째 손가락 터치를 저장
-            Touch SecondTouch = Input.GetTouch(1); //두번째 손가락 터치를 저장
+            Touch FirstTouch = Input.GetTouch(0);
+            Touch SecondTouch = Input.GetTouch(1);
 
-            //터치에 대한 이전 위치값을 각각 저장함
-            //처음 터치한 위치(touchZero.position)에서 이전 프레임에서의 터치 위치와 이번 프로임에서 터치 위치의 차이를 뺌
-            Vector2 touchZeroPrevPos = FirstTouch.position - FirstTouch.deltaPosition; //deltaPosition는 이동방향 추적할 때 사용
+            Vector2 touchZeroPrevPos = FirstTouch.position - FirstTouch.deltaPosition;
             Vector2 touchOnePrevPos = SecondTouch.position - SecondTouch.deltaPosition;
-			
-            // 각 프레임에서 터치 사이의 벡터 거리 구함
-            float prevTouchDeltaMag = (touchZeroPrevPos - touchOnePrevPos).magnitude; //magnitude는 두 점간의 거리 비교(벡터)
+
+            float prevTouchDeltaMag = (touchZeroPrevPos - touchOnePrevPos).magnitude;
             float touchDeltaMag = (FirstTouch.position - SecondTouch.position).magnitude;
 
-            // 거리 차이 구함(거리가 이전보다 크면(마이너스가 나오면)손가락을 벌린 상태_줌인 상태)
             float deltaMagnitudeDiff = prevTouchDeltaMag - touchDeltaMag;
 
             if(deltaMagnitudeDiff <= 0) { IsZoom = 1; }
@@ -99,6 +109,25 @@ public class TouchInput : MonoBehaviour
         {
             IsZoom = 0;
         }
+    }
+
+    private void StartTouch()
+    {
+        _touchCount = Input.touchCount;
+
+        switch(_touchCount)
+        {
+            case 1:
+
+                break;
+            case 2:
+                Zoom();
+                break;
+            default :
+                _touchCount = 0;
+                break;
+        }
+
     }
     
     
