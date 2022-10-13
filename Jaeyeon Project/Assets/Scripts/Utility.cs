@@ -6,7 +6,7 @@ using UnityEngine.XR.ARSubsystems;
 public class Utility
 {
     private static ARRaycastManager     _raycastManager;
-    private static List<ARRaycastHit>   _hits; = new List<ARRaycastHit>();
+    private static List<ARRaycastHit>   _hits = new List<ARRaycastHit>();
 
     static Utility()
     {

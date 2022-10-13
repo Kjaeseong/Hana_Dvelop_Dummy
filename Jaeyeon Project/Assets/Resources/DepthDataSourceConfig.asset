@@ -9,7 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fe066fb4e3d1477cb936e174f5f10fd, type: 3}
+  m_Script: {fileID: 11500000, guid: 16b8f63b03024ad4c80a8673dfa50cdf, type: 3}
   m_Name: DepthDataSourceConfig
   m_EditorClassIdentifier: 
-  DepthSourceClassName: MotionStereoDepthDataSource
