@@ -38,18 +38,18 @@ namespace Google.Maps.Examples {
       mapsService.LoadMap(ExampleDefaults.DefaultBounds, ExampleDefaults.DefaultGameObjectOptions);
     }
         
-        private void Update()
-        {
-            if (GPSManager.Count > 1000)
-            {
-                LatLng = new LatLng((double)Input.location.lastData.latitude, (double)Input.location.lastData.longitude);//new LatLng((double)GPSManager.Lat, (double)GPSManager.Long);
-                mapsService.MakeMapLoadRegion();
-                mapsService.MoveFloatingOrigin(LatLng);
-                mapsService.LoadMap(ExampleDefaults.DefaultBounds, ExampleDefaults.DefaultGameObjectOptions);
-                GPSManager.Count = 0;
-            }
-            GPSManager.Count++;
-        }
+        //private void Update()
+        //{
+        //    if (GPSManager.Count > 1000)
+        //    {
+        //        LatLng = new LatLng((double)Input.location.lastData.latitude, (double)Input.location.lastData.longitude);//new LatLng((double)GPSManager.Lat, (double)GPSManager.Long);
+        //        mapsService.MakeMapLoadRegion();
+        //        mapsService.MoveFloatingOrigin(LatLng);
+        //        mapsService.LoadMap(ExampleDefaults.DefaultBounds, ExampleDefaults.DefaultGameObjectOptions);
+        //        GPSManager.Count = 0;
+        //    }
+        //    GPSManager.Count++;
+        //}
         /// <summary>
         /// Example of OnLoaded event listener.
         /// </summary>
