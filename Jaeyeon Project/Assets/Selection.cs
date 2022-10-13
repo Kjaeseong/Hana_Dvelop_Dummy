@@ -31,7 +31,7 @@ public class Selection : MonoBehaviour
 */
 
         _ray = _camera.ScreenPointToRay(_touchPose);
-        if(Physics.Raycast(_ray, out _hit, 10f, _selectObjectLayer))
+        if(Physics.Raycast(_ray, out _hit, 100f, _selectObjectLayer))
         {
             InteractObj.SelectedObject = _hit.transform.GetComponentInChildren<InteractObj>();
             hitCount++;
@@ -49,14 +49,12 @@ public class Selection : MonoBehaviour
             _selectButton.onClick.Invoke();
         }
         
-        if (Physics.Raycast(_ray, out _hit, 10f, _eatObjectLayer))
+        if (Physics.Raycast(_ray, out _hit, 100f, _eatObjectLayer))
         {
             if (_hit.transform == null || (_hit.transform != null && _hit.transform.GetComponent<InteractObj>() == null)) return;
 
-            var interactObj = _hit.transform.GetComponent<InteractObj>();
-            interactObj.DestroyObj();
-
-
+            _interactObj = _hit.transform.GetComponent<InteractObj>();
+           _interactObj.DestroyObj();
         }
         //InteractObj.SelecSSstedObject = null;
     }

@@ -3272,27 +3272,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InteractObj_DestroyObj_mCDE549F91968AA28
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// if(SelectedObject != null)
-		InteractObj_t864685B5B03B423AC6BEFD744E65D155C2B646F5* L_0;
-		L_0 = InteractObj_get_SelectedObject_mFB3C932EB23F5AF08A785685A93CF850844375B9_inline(NULL);
+		// Destroy(gameObject);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0;
+		L_0 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_1;
-		L_1 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (!L_1)
-		{
-			goto IL_0018;
-		}
-	}
-	{
-		// Destroy(this.gameObject);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2;
-		L_2 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
-		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		Object_Destroy_mE97D0A766419A81296E8D4E5C23D01D3FE91ACBB(L_2, NULL);
-	}
-
-IL_0018:
-	{
+		Object_Destroy_mE97D0A766419A81296E8D4E5C23D01D3FE91ACBB(L_0, NULL);
 		// }
 		return;
 	}
@@ -6094,14 +6078,14 @@ IL_000e:
 		Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00 L_5;
 		L_5 = Camera_ScreenPointToRay_m2887B9A49880B7AB670C57D66B67D6A6689FE315(L_2, L_4, NULL);
 		__this->____ray_13 = L_5;
-		// if(Physics.Raycast(_ray, out _hit, 10f, _selectObjectLayer))
+		// if(Physics.Raycast(_ray, out _hit, 100f, _selectObjectLayer))
 		Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00 L_6 = __this->____ray_13;
 		RaycastHit_t6F30BD0B38B56401CA833A1B87BD74F2ACD2F2B5* L_7 = (&__this->____hit_14);
 		LayerMask_t97CB6BDADEDC3D6423C7BCFEA7F86DA2EC6241DB L_8 = __this->____selectObjectLayer_5;
 		int32_t L_9;
 		L_9 = LayerMask_op_Implicit_m7F5A5B9D079281AC445ED39DEE1FCFA9D795810D(L_8, NULL);
 		bool L_10;
-		L_10 = Physics_Raycast_m34AC1210E893A9EF969BD2C7104B10BE5B580025(L_6, L_7, (10.0f), L_9, NULL);
+		L_10 = Physics_Raycast_m34AC1210E893A9EF969BD2C7104B10BE5B580025(L_6, L_7, (100.0f), L_9, NULL);
 		if (!L_10)
 		{
 			goto IL_008b;
@@ -6178,17 +6162,17 @@ IL_008b:
 
 IL_00d4:
 	{
-		// if (Physics.Raycast(_ray, out _hit, 10f, _eatObjectLayer))
+		// if (Physics.Raycast(_ray, out _hit, 100f, _eatObjectLayer))
 		Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00 L_27 = __this->____ray_13;
 		RaycastHit_t6F30BD0B38B56401CA833A1B87BD74F2ACD2F2B5* L_28 = (&__this->____hit_14);
 		LayerMask_t97CB6BDADEDC3D6423C7BCFEA7F86DA2EC6241DB L_29 = __this->____eatObjectLayer_6;
 		int32_t L_30;
 		L_30 = LayerMask_op_Implicit_m7F5A5B9D079281AC445ED39DEE1FCFA9D795810D(L_29, NULL);
 		bool L_31;
-		L_31 = Physics_Raycast_m34AC1210E893A9EF969BD2C7104B10BE5B580025(L_27, L_28, (10.0f), L_30, NULL);
+		L_31 = Physics_Raycast_m34AC1210E893A9EF969BD2C7104B10BE5B580025(L_27, L_28, (100.0f), L_30, NULL);
 		if (!L_31)
 		{
-			goto IL_014b;
+			goto IL_0157;
 		}
 	}
 	{
@@ -6240,19 +6224,22 @@ IL_0135:
 
 IL_0136:
 	{
-		// var interactObj = _hit.transform.GetComponent<InteractObj>();
+		// _interactObj = _hit.transform.GetComponent<InteractObj>();
 		RaycastHit_t6F30BD0B38B56401CA833A1B87BD74F2ACD2F2B5* L_42 = (&__this->____hit_14);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_43;
 		L_43 = RaycastHit_get_transform_m89DB7FCFC50E0213A37CBE089400064B8FA19155(L_42, NULL);
 		NullCheck(L_43);
 		InteractObj_t864685B5B03B423AC6BEFD744E65D155C2B646F5* L_44;
 		L_44 = Component_GetComponent_TisInteractObj_t864685B5B03B423AC6BEFD744E65D155C2B646F5_m526AF10F1D95118A89EA09AC90B43782DDF4F92C(L_43, Component_GetComponent_TisInteractObj_t864685B5B03B423AC6BEFD744E65D155C2B646F5_m526AF10F1D95118A89EA09AC90B43782DDF4F92C_RuntimeMethod_var);
-		// interactObj.DestroyObj();
-		NullCheck(L_44);
-		InteractObj_DestroyObj_mCDE549F91968AA2866BAA40990313F6F0F7BF0FD(L_44, NULL);
+		__this->____interactObj_9 = L_44;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->____interactObj_9), (void*)L_44);
+		// _interactObj.DestroyObj();
+		InteractObj_t864685B5B03B423AC6BEFD744E65D155C2B646F5* L_45 = __this->____interactObj_9;
+		NullCheck(L_45);
+		InteractObj_DestroyObj_mCDE549F91968AA2866BAA40990313F6F0F7BF0FD(L_45, NULL);
 	}
 
-IL_014b:
+IL_0157:
 	{
 		// }
 		return;

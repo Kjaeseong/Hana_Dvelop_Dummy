@@ -38,10 +38,8 @@ public class InteractObj : MonoBehaviour
     }
     public void DestroyObj()
     {
-        if(SelectedObject != null)
-        {
-            Destroy(this.gameObject);
-        }
+        
+            Destroy(gameObject);
     }
     public void Disable()
     {
