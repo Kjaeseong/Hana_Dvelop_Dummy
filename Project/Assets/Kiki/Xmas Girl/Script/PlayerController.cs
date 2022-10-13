@@ -7,6 +7,10 @@ namespace SD
 
     public class PlayerController : MonoBehaviour
     {
+        // TODO : 아래 함수 수정 필요합니다.
+        // FIXME : 다른사람한테 수정 요청할때
+        // HACK : 문제 해결은 했는데. 해결책이 좀 이상해서 수정해야할때
+        // XXX : 이건 존나 멸망했음을 의미
      
         [Header("Player Setting")]
         public float turnSpeed = 10f;
