@@ -40,7 +40,7 @@ public class AvatarController : MonoBehaviour
     [HideInInspector]
     public bool EnableAvatarManipulation;
 
-    private const float _distanceToPickUp = 0.6f;
+    private const float _distanceToPickUp = 0.4f;
     private const float _lookAtCameraRotationDuration = 0.5f;
     private const float _maxAvatarDistanceInMeter = 0.5f;
     private const float _raycastStartOffsetInMeter = 0.5f;
@@ -49,6 +49,9 @@ public class AvatarController : MonoBehaviour
     private const float _maxChaseDistanceInMeter = 10;
     private const float _maxHeightAbovePawnInMeter = 1f;
     private const float _minimumDistanceChange = 0.005f;
+
+    [HideInInspector]
+    public Animator m_Animator;
 
     /// <summary>
     /// This point determines where the avatar should move to next.
@@ -77,6 +80,10 @@ public class AvatarController : MonoBehaviour
         StopCoroutine("LookAtCameraCoroutine");
     }
 
+    private void Awake()
+    {
+        m_Animator = GetComponent<Animator>();
+    }
     /// <summary>
     /// Initializes the cubes.
     /// </summary>
@@ -176,9 +183,14 @@ public class AvatarController : MonoBehaviour
 
         currentDistance = Vector3.Distance(interpolatedPos, newPos);
 
+        m_Animator.SetBool(Const.Moving, true);
+        m_Animator.SetFloat(Const.Speed, 1f);
+        
         if (currentDistance < _distanceToPickUp ||
             _cubeObjects[0].transform.position.y < -_maxChaseDistanceInMeter)
         {
+            m_Animator.SetBool(Const.Moving, false);
+            m_Animator.SetFloat(Const.Speed, 0f);
             GameObject cubeToRemove = _cubeObjects[0];
             _cubeObjects.Remove(cubeToRemove);
             Destroy(cubeToRemove);
