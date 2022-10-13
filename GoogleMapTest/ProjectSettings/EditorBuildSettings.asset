@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/GoogleMaps/Examples/01_GettingStarted/HelloWorld.unity
+    guid: 219fc20f344ac44c19a4694de15c2eb9
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 22caecd0de127624880c13636eb062e1, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: e1eda277ea09fb640aa1e24301d8ac76, type: 2}
