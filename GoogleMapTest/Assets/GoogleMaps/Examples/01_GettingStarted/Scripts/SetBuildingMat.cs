@@ -24,6 +24,7 @@ public class SetBuildingMat : MonoBehaviour
         foreach(var renderer in _mesh)
         {
             renderer.materials = _mat;
+            renderer.gameObject.AddComponent<MeshCollider>();
         }
     }
 
