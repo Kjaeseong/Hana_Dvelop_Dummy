@@ -1014,6 +1014,10 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5784567875901771869, guid: 1050ac8c10922a64b8857cbe4dbcfc64, type: 3}
+      propertyPath: ARCamm
+      value: 
+      objectReference: {fileID: 633987594}
+    - target: {fileID: 5784567875901771869, guid: 1050ac8c10922a64b8857cbe4dbcfc64, type: 3}
       propertyPath: _arRaycaster
       value: 
       objectReference: {fileID: 259715464}
