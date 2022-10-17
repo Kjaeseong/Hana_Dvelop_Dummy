@@ -11,7 +11,7 @@ public class GPSManager : MonoBehaviour
     public double High;
     public string ErrText;
     [SerializeField][Range(0, 10)] private float _retryTime = 5f;
-    [SerializeField][Range(0, 10)] private float _updateDelay = 1f;
+    //[SerializeField][Range(0, 10)] private float _updateDelay = 1f;
 
 
     private float Delay;
@@ -59,5 +59,7 @@ public class GPSManager : MonoBehaviour
         High = Input.location.lastData.altitude;
         ErrText = "OK";
         yield return new WaitForSeconds(1.0f);
+
+
     }
 }

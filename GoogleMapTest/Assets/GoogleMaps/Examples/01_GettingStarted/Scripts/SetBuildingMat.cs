@@ -20,30 +20,28 @@ namespace Google.Maps.Examples
 
         [SerializeField]
         private GameObject _AI_test;
+
         [SerializeField]
-        private GameObject _PositiontestBox;
+        private GameObject _Position_Test;
+       
         private MapsService _mapsService;
         private LatLng _latLng;
 
-        public GPSManager GPSManager;
+        private float _coord_x_Control = 3.5f;
+        private float _coord_z_Control = 3.5f;
+        private float _basePlateHigh = 0.5f;
 
         private void Start()
         {
             Invoke("GetMesh", 1f);
-            //맵 GPS 불러오기 테스트
-            _mapsService = GetComponent<MapsService>();
-            //실제 월드 로케이션 로드
-            //_mapsService.InitFloatingOrigin(_latLng);
-            //리스너 만들기
-            _mapsService.Events.MapEvents.Loaded.AddListener(OnLoaded);
-            //맵 불러오기
-            _latLng = new LatLng(0, 0);
-            Instantiate(_PositiontestBox, new Vector3((float)_latLng.Lat, 0.5f, (float)_latLng.Lng), Quaternion.identity);
+            //_latLng = new LatLng(37.540379, 127.124526);
         }
 
         private void GetMesh()
         {
             _mesh = GetComponentsInChildren<MeshRenderer>();
+
+            _latLng = new LatLng((double)_latLng.Lat, (double)_latLng.Lng);
 
             foreach (var renderer in _mesh)
             {
@@ -51,6 +49,7 @@ namespace Google.Maps.Examples
                 renderer.gameObject.AddComponent<MeshCollider>();
                 renderer.gameObject.AddComponent<NavMeshSourceTag>();
             }
+            FindBuilding();
             //Instantiate(_AI_test, new Vector3(0, 0.5f, 0), Quaternion.identity);
             //Instantiate(_PositiontestBox, new Vector3(0, 0.5f, 0), Quaternion.identity);
         }
@@ -59,6 +58,21 @@ namespace Google.Maps.Examples
         {
             // The Map is loaded - you can start/resume gameplay from that point.
             // The new geometry is added under the GameObject that has MapsService as a component.
+        }
+
+
+        // TODO : 위치 오브젝트를 추가하여 아래 함수 확장성 개발 요망.
+        /// <summary>
+        /// 건물을 찾고, 건물의 위치 앞에 오브젝트를 설치하는 함수
+        /// </summary>
+        private void FindBuilding()
+        {
+            // 건물의 이름을 찾아 넣는다.
+            GameObject testBuilding = GameObject.Find("ExtrudedStructure (ChIJVfE8QFWlfDURXCkCNgT2X_g)");
+            Vector3 TestBuildingPos = testBuilding.transform.position;
+            // 오브젝트를 해당 건물의 주변에 원하는 위치에 생성한다.
+            Instantiate(_Position_Test, new Vector3(TestBuildingPos.x - _coord_x_Control, _basePlateHigh, TestBuildingPos.z - _coord_z_Control), 
+                Quaternion.identity);
         }
     }
 }

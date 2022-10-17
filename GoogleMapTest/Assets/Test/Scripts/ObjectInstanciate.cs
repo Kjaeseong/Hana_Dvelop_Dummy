@@ -1,4 +1,4 @@
-﻿using Google.Maps.Coord;
+using Google.Maps.Coord;
 using Google.Maps.Event;
 using Google.Maps.Examples.Shared;
 using UnityEngine;
@@ -13,11 +13,13 @@ namespace Google.Maps.Examples
     /// inspector before pressing start, that location will be loaded instead.
     /// </remarks>
     [RequireComponent(typeof(MapsService))]
-    public class BasicExample : MonoBehaviour
+    public class ObjectInstanciate : MonoBehaviour
     {
         [Tooltip("LatLng to load (must be set before hitting play).")]
         [SerializeField]
         private LatLng LatLng;// = new LatLng(40.6892199, -74.044601);
+        [SerializeField]
+        private GameObject _PositiontestBox;
         private MapsService mapsService;
         public GPSManager GPSManager;
 
@@ -26,19 +28,15 @@ namespace Google.Maps.Examples
         /// </summary>
         private void Start()
         {
-
             // Get required MapsService component on this GameObject.
             /*MapsService */
             mapsService = GetComponent<MapsService>();
 
             // Set real-world location to load.
-            mapsService.InitFloatingOrigin(LatLng);
+            //mapsService.InitFloatingOrigin(LatLng);
 
             // Register a listener to be notified when the map is loaded.
             mapsService.Events.MapEvents.Loaded.AddListener(OnLoaded);
-
-            // Load map with default options.
-            mapsService.LoadMap(ExampleDefaults.DefaultBounds, ExampleDefaults.DefaultGameObjectOptions);
         }
 
         //private void Update()
@@ -64,5 +62,8 @@ namespace Google.Maps.Examples
             // The Map is loaded - you can start/resume gameplay from that point.
             // The new geometry is added under the GameObject that has MapsService as a component.
         }
+
     }
+
+
 }
