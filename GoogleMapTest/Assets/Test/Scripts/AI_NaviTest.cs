@@ -6,14 +6,20 @@ using UnityEngine.AI;
 public class AI_NaviTest : MonoBehaviour
 {
     [SerializeField]
-    private Transform _ai_destination;
+    //private Transform _ai_destination;
     private NavMeshAgent Ai_Agent;
+
+    public GameObject TestDestination;
 
     private void Awake()
     {
         Ai_Agent = GetComponent<NavMeshAgent>();
         //Ai_Agent.autoBraking = false;
+    }
 
+    private void Start()
+    {
+        //Ai_Agent.enabled = true;
         MoveWayPoint();
     }
 
@@ -28,6 +34,11 @@ public class AI_NaviTest : MonoBehaviour
 
     private void Update()
     {
-        Ai_Agent.destination = _ai_destination.position;
+        if (TestDestination == null)
+        {
+            return;
+        }
+
+        Ai_Agent.destination = TestDestination.transform.position;
     }
 }

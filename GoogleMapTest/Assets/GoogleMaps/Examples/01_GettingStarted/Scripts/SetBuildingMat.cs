@@ -22,13 +22,19 @@ namespace Google.Maps.Examples
 
         [SerializeField]
         private GameObject _Position_Test;
-        
+
         private MapsService _mapsService;
         private LatLng _latLng;
 
-        private float _coord_x_Control = 5f;
-        private float _coord_z_Control = 5f;
+        private float _coord_x_Control = 10f;
+        private float _coord_z_Control = 10f;
         private float _basePlateHigh = 0.5f;
+
+        private float _elapsedTime = 0f;
+        private int _count = 1;
+        private int _countTime = 1;
+
+        private AI_NaviTest _ai_Navitest;
 
         public string Destination_Name;
 
@@ -37,6 +43,23 @@ namespace Google.Maps.Examples
             Invoke("GetMesh", 1f);
             //_latLng = new LatLng(37.540379, 127.124526);
         }
+
+        private void Update()
+        {
+            _elapsedTime += Time.deltaTime;
+            if (_elapsedTime > 2f && _count != 0)
+            {
+                GameObject AI = Instantiate(_AI_test, new Vector3(0, 0, 0), Quaternion.identity);
+                _ai_Navitest = AI.GetComponent<AI_NaviTest>();
+                _count--;
+            }
+            if (_elapsedTime > 4f && _countTime != 0)
+            {
+                FindBuilding();
+                _countTime--;
+            }
+        }
+
 
         private void GetMesh()
         {
@@ -50,10 +73,8 @@ namespace Google.Maps.Examples
                 renderer.gameObject.AddComponent<MeshCollider>();
                 renderer.gameObject.AddComponent<NavMeshSourceTag>();
             }
+            //FindBuilding();
 
-            FindBuilding();
-            //Instantiate(_AI_test, new Vector3(0, 0.5f, 0), Quaternion.identity);
-            //Instantiate(_PositiontestBox, new Vector3(0, 0.5f, 0), Quaternion.identity);
         }
 
         public void OnLoaded(MapLoadedArgs args)
@@ -75,7 +96,7 @@ namespace Google.Maps.Examples
 
             // 오브젝트를 해당 건물의 주변에 원하는 위치에 생성한다. 이 부분 또한 위치 로케이션 오브젝트를 추가하여
             // 확장성을 높일 수 있음.
-            Instantiate(_Position_Test, new Vector3(TestBuildingPos.x - _coord_x_Control, _basePlateHigh, TestBuildingPos.z - _coord_z_Control), 
+            _ai_Navitest.TestDestination = Instantiate(_Position_Test, new Vector3(TestBuildingPos.x - _coord_x_Control, _basePlateHigh, TestBuildingPos.z - _coord_z_Control),
                 Quaternion.identity);
         }
     }

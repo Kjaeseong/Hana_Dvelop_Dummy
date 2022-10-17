@@ -578,21 +578,29 @@ PrefabInstance:
       propertyPath: m_IsKinematic
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 568823004, guid: b252ec68a47c4d542911c5c13e9d2088, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1640212685382743743, guid: b252ec68a47c4d542911c5c13e9d2088, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1640212685382743743, guid: b252ec68a47c4d542911c5c13e9d2088, type: 3}
+      propertyPath: TestDestination
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1640212685382743743, guid: b252ec68a47c4d542911c5c13e9d2088, type: 3}
       propertyPath: _ai_destination
       value: 
-      objectReference: {fileID: 876101782}
+      objectReference: {fileID: 2141697252}
     - target: {fileID: 6348611037806450371, guid: b252ec68a47c4d542911c5c13e9d2088, type: 3}
       propertyPath: m_Name
       value: Nav_AI
       objectReference: {fileID: 0}
     - target: {fileID: 6348611037806450371, guid: b252ec68a47c4d542911c5c13e9d2088, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6348611037806450399, guid: b252ec68a47c4d542911c5c13e9d2088, type: 3}
       propertyPath: m_RootOrder
@@ -648,6 +656,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b252ec68a47c4d542911c5c13e9d2088, type: 3}
+--- !u!114 &843979994 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1640212685382743743, guid: b252ec68a47c4d542911c5c13e9d2088, type: 3}
+  m_PrefabInstance: {fileID: 605426081}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f594887877e87dc438c7d51304961aa3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &876101781
 GameObject:
   m_ObjectHideFlags: 0
@@ -907,6 +926,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: f8a8a8a35863fde4989b51d807bf7b1f, type: 2}
   _AI_test: {fileID: 6348611037806450371, guid: b252ec68a47c4d542911c5c13e9d2088, type: 3}
   _Position_Test: {fileID: 826676690878647091, guid: 2bfdf38187badd84b9bb4ff7ee3088c0, type: 3}
+  _ai_Navitest: {fileID: 843979994}
   Destination_Name: ExtrudedStructure (ChIJvbnOXFWlfDURQaNjy7fTbdo)
 --- !u!1001 &1040466400
 PrefabInstance:
