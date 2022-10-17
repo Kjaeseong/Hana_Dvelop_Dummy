@@ -119,7 +119,7 @@ public class PositionSensor : MonoBehaviour
         {
             _gpsStarted = false;
             Input.location.Stop();
-            StopCoroutine(GpsStart());
+            StopCoroutine(GpsStart()); 
         }
     }
 
