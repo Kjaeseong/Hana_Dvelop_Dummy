@@ -18774,8 +18774,8 @@ struct HTCViveControllerProfile_t65F40E7ED71E6833A8252AC7F7A2CD250A5A78C4  : pub
 // InteractObj
 struct InteractObj_t864685B5B03B423AC6BEFD744E65D155C2B646F5  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
-	// UnityEngine.GameObject InteractObj::_selcetedObject
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____selcetedObject_4;
+	// UnityEngine.GameObject InteractObj::_selcetedCanvasObject
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____selcetedCanvasObject_4;
 };
 
 struct InteractObj_t864685B5B03B423AC6BEFD744E65D155C2B646F5_StaticFields
@@ -18887,20 +18887,20 @@ struct Selection_tC3273612256235F7FCFBC6A2337AA1DC7FB19538  : public MonoBehavio
 	LayerMask_t97CB6BDADEDC3D6423C7BCFEA7F86DA2EC6241DB ____eatObjectLayer_6;
 	// UnityEngine.LayerMask Selection::_UILayer
 	LayerMask_t97CB6BDADEDC3D6423C7BCFEA7F86DA2EC6241DB ____UILayer_7;
-	// UnityEngine.GameObject Selection::_placePrefab
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____placePrefab_8;
+	// System.Single Selection::_laycastDistance
+	float ____laycastDistance_8;
 	// InteractObj Selection::_interactObj
 	InteractObj_t864685B5B03B423AC6BEFD744E65D155C2B646F5* ____interactObj_9;
 	// UnityEngine.UI.Button Selection::_selectButton
 	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ____selectButton_10;
-	// System.Int32 Selection::hitCount
-	int32_t ___hitCount_11;
 	// UnityEngine.Vector2 Selection::_touchPose
-	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ____touchPose_12;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ____touchPose_11;
 	// UnityEngine.Ray Selection::_ray
-	Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00 ____ray_13;
+	Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00 ____ray_12;
 	// UnityEngine.RaycastHit Selection::_hit
-	RaycastHit_t6F30BD0B38B56401CA833A1B87BD74F2ACD2F2B5 ____hit_14;
+	RaycastHit_t6F30BD0B38B56401CA833A1B87BD74F2ACD2F2B5 ____hit_13;
+	// System.Int32 Selection::hitCount
+	int32_t ___hitCount_14;
 };
 
 // UnityEngine.SpatialTracking.TrackedPoseDriver
@@ -23963,7 +23963,7 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4653[8] =
 	static_cast<int32_t>(offsetof(Utility_t8BCC393462C6270211734BE47CF5350F05EC97AD_StaticFields, ___GraphicsResourcesRecreate_0)),static_cast<int32_t>(offsetof(Utility_t8BCC393462C6270211734BE47CF5350F05EC97AD_StaticFields, ___EngineUpdate_1)),static_cast<int32_t>(offsetof(Utility_t8BCC393462C6270211734BE47CF5350F05EC97AD_StaticFields, ___FlushPendingResources_2)),static_cast<int32_t>(offsetof(Utility_t8BCC393462C6270211734BE47CF5350F05EC97AD_StaticFields, ___RegisterIntermediateRenderers_3)),static_cast<int32_t>(offsetof(Utility_t8BCC393462C6270211734BE47CF5350F05EC97AD_StaticFields, ___RenderNodeAdd_4)),static_cast<int32_t>(offsetof(Utility_t8BCC393462C6270211734BE47CF5350F05EC97AD_StaticFields, ___RenderNodeExecute_5)),static_cast<int32_t>(offsetof(Utility_t8BCC393462C6270211734BE47CF5350F05EC97AD_StaticFields, ___RenderNodeCleanup_6)),static_cast<int32_t>(offsetof(Utility_t8BCC393462C6270211734BE47CF5350F05EC97AD_StaticFields, ___s_MarkerRaiseEngineUpdate_7)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4655[2] = 
 {
-	static_cast<int32_t>(offsetof(InteractObj_t864685B5B03B423AC6BEFD744E65D155C2B646F5, ____selcetedObject_4)),static_cast<int32_t>(offsetof(InteractObj_t864685B5B03B423AC6BEFD744E65D155C2B646F5_StaticFields, ____interactObject_5)),};
+	static_cast<int32_t>(offsetof(InteractObj_t864685B5B03B423AC6BEFD744E65D155C2B646F5, ____selcetedCanvasObject_4)),static_cast<int32_t>(offsetof(InteractObj_t864685B5B03B423AC6BEFD744E65D155C2B646F5_StaticFields, ____interactObject_5)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4656[2] = 
 {
 	static_cast<int32_t>(offsetof(DepthDataSourceConfig_tF075BE2FD9D235EC12FC9F14D3F2191FA10ADD92, ___DepthSourceClassName_4)),static_cast<int32_t>(offsetof(DepthDataSourceConfig_tF075BE2FD9D235EC12FC9F14D3F2191FA10ADD92, ___DepthDataSource_5)),};
@@ -23978,7 +23978,7 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4660[2] =
 	static_cast<int32_t>(offsetof(Utility_t229A905233923073FC38E05AC74BBCB12DF3CA7B_StaticFields, ____raycastManager_0)),static_cast<int32_t>(offsetof(Utility_t229A905233923073FC38E05AC74BBCB12DF3CA7B_StaticFields, ____hits_1)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4661[11] = 
 {
-	static_cast<int32_t>(offsetof(Selection_tC3273612256235F7FCFBC6A2337AA1DC7FB19538, ____camera_4)),static_cast<int32_t>(offsetof(Selection_tC3273612256235F7FCFBC6A2337AA1DC7FB19538, ____selectObjectLayer_5)),static_cast<int32_t>(offsetof(Selection_tC3273612256235F7FCFBC6A2337AA1DC7FB19538, ____eatObjectLayer_6)),static_cast<int32_t>(offsetof(Selection_tC3273612256235F7FCFBC6A2337AA1DC7FB19538, ____UILayer_7)),static_cast<int32_t>(offsetof(Selection_tC3273612256235F7FCFBC6A2337AA1DC7FB19538, ____placePrefab_8)),static_cast<int32_t>(offsetof(Selection_tC3273612256235F7FCFBC6A2337AA1DC7FB19538, ____interactObj_9)),static_cast<int32_t>(offsetof(Selection_tC3273612256235F7FCFBC6A2337AA1DC7FB19538, ____selectButton_10)),static_cast<int32_t>(offsetof(Selection_tC3273612256235F7FCFBC6A2337AA1DC7FB19538, ___hitCount_11)),static_cast<int32_t>(offsetof(Selection_tC3273612256235F7FCFBC6A2337AA1DC7FB19538, ____touchPose_12)),static_cast<int32_t>(offsetof(Selection_tC3273612256235F7FCFBC6A2337AA1DC7FB19538, ____ray_13)),static_cast<int32_t>(offsetof(Selection_tC3273612256235F7FCFBC6A2337AA1DC7FB19538, ____hit_14)),};
+	static_cast<int32_t>(offsetof(Selection_tC3273612256235F7FCFBC6A2337AA1DC7FB19538, ____camera_4)),static_cast<int32_t>(offsetof(Selection_tC3273612256235F7FCFBC6A2337AA1DC7FB19538, ____selectObjectLayer_5)),static_cast<int32_t>(offsetof(Selection_tC3273612256235F7FCFBC6A2337AA1DC7FB19538, ____eatObjectLayer_6)),static_cast<int32_t>(offsetof(Selection_tC3273612256235F7FCFBC6A2337AA1DC7FB19538, ____UILayer_7)),static_cast<int32_t>(offsetof(Selection_tC3273612256235F7FCFBC6A2337AA1DC7FB19538, ____laycastDistance_8)),static_cast<int32_t>(offsetof(Selection_tC3273612256235F7FCFBC6A2337AA1DC7FB19538, ____interactObj_9)),static_cast<int32_t>(offsetof(Selection_tC3273612256235F7FCFBC6A2337AA1DC7FB19538, ____selectButton_10)),static_cast<int32_t>(offsetof(Selection_tC3273612256235F7FCFBC6A2337AA1DC7FB19538, ____touchPose_11)),static_cast<int32_t>(offsetof(Selection_tC3273612256235F7FCFBC6A2337AA1DC7FB19538, ____ray_12)),static_cast<int32_t>(offsetof(Selection_tC3273612256235F7FCFBC6A2337AA1DC7FB19538, ____hit_13)),static_cast<int32_t>(offsetof(Selection_tC3273612256235F7FCFBC6A2337AA1DC7FB19538, ___hitCount_14)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4662[5] = 
 {
 	static_cast<int32_t>(offsetof(GeospatialAnchorHistory_t6908A396462F1450B5999D2948632194CD812A5C, ___SerializedTime_0)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(GeospatialAnchorHistory_t6908A396462F1450B5999D2948632194CD812A5C, ___Latitude_1)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(GeospatialAnchorHistory_t6908A396462F1450B5999D2948632194CD812A5C, ___Longitude_2)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(GeospatialAnchorHistory_t6908A396462F1450B5999D2948632194CD812A5C, ___Altitude_3)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(GeospatialAnchorHistory_t6908A396462F1450B5999D2948632194CD812A5C, ___Heading_4)) + static_cast<int32_t>(sizeof(RuntimeObject)),};
