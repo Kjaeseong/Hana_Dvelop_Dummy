@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using Google.XR.ARCoreExtensions;
 using UnityEngine.XR.ARSubsystems;
+using System;
 
 public class PositionSensor : MonoBehaviour 
 {
@@ -45,6 +46,8 @@ public class PositionSensor : MonoBehaviour
         _retry = new WaitForSeconds (_retryTime);
 
         StartCoroutine(GpsStart());
+
+        Debug.Log(GetDistAtoB(37.5386, 127.1235, 37.5501, 127.1275));
     }
 
     private IEnumerator GpsStart() 
@@ -120,8 +123,6 @@ public class PositionSensor : MonoBehaviour
         }
     }
 
-
-
     public double GetLat()
     {
         return _nowLat;
@@ -140,6 +141,36 @@ public class PositionSensor : MonoBehaviour
     public double GetAzimuth()
     {
         return _pose.Heading;
+    }
+
+    /// <summary>
+    /// 위/경도 기준 A에서 B까지의 거리 반환(구체 표면거리, 미터(M) 기준)
+    /// </summary>
+    public double GetDistAtoB(double A_Lat, double A_Long, double B_Lat, double B_Long)
+    {
+        double Theta;
+        double Distance;
+
+        Theta = A_Long - B_Long;
+        
+        Distance = Math.Sin(deg2rad(A_Lat)) * Math.Sin(deg2rad(B_Lat)) + Math.Cos(deg2rad(A_Lat)) * Math.Cos(deg2rad(B_Lat)) * Math.Cos(deg2rad(Theta));
+        Distance = Math.Acos(Distance);
+        Distance = rad2deg(Distance);
+
+        Distance = Distance * 60 * 1.1515;
+        Distance = Distance * 1.609344;
+        Distance = Distance * 1000.0;
+
+        return Distance;
+    }
+
+    private double deg2rad(double deg)
+    {
+        return (double)(deg * Math.PI / (double)180d);
+    }
+    private double rad2deg(double rad)
+    {
+        return (double)(rad * (double)180d / Math.PI);
     }
 
     private void DebugLog(string Text)
