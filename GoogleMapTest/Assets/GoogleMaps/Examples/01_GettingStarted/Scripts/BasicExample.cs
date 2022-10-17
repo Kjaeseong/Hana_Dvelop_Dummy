@@ -12,14 +12,13 @@ namespace Google.Maps.Examples {
   /// inspector before pressing start, that location will be loaded instead.
   /// </remarks>
   [RequireComponent(typeof(MapsService))]
-  public class BasicExample : MonoBehaviour {
+  public class BasicExample : MonoBehaviour 
+    {
         [Tooltip("LatLng to load (must be set before hitting play).")]
         [SerializeField]
         private LatLng LatLng;// = new LatLng(40.6892199, -74.044601);
-
         private MapsService mapsService;
         public GPSManager GPSManager;
-
         
     /// <summary>
     /// Use <see cref="MapsService"/> to load geometry.
