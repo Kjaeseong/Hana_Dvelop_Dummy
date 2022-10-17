@@ -2820,13 +2820,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t LayerMask_op_Implicit_m7F5A5B9D079281
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Physics_Raycast_m34AC1210E893A9EF969BD2C7104B10BE5B580025 (Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00 ___ray0, RaycastHit_t6F30BD0B38B56401CA833A1B87BD74F2ACD2F2B5* ___hitInfo1, float ___maxDistance2, int32_t ___layerMask3, const RuntimeMethod* method) ;
 // UnityEngine.Transform UnityEngine.RaycastHit::get_transform()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* RaycastHit_get_transform_m89DB7FCFC50E0213A37CBE089400064B8FA19155 (RaycastHit_t6F30BD0B38B56401CA833A1B87BD74F2ACD2F2B5* __this, const RuntimeMethod* method) ;
-// T UnityEngine.Component::GetComponentInChildren<InteractObj>()
-inline InteractObj_t864685B5B03B423AC6BEFD744E65D155C2B646F5* Component_GetComponentInChildren_TisInteractObj_t864685B5B03B423AC6BEFD744E65D155C2B646F5_m7116D069F0684C098197FA17DE5A0E800C7DE05B (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method)
-{
-	return ((  InteractObj_t864685B5B03B423AC6BEFD744E65D155C2B646F5* (*) (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3*, const RuntimeMethod*))Component_GetComponentInChildren_TisRuntimeObject_mE483A27E876DE8E4E6901D6814837F81D7C42F65_gshared)(__this, method);
-}
-// System.Void InteractObj::Disable()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InteractObj_Disable_m1956B97DD12AF261C43527AAEB62E25BE3B0A79F (InteractObj_t864685B5B03B423AC6BEFD744E65D155C2B646F5* __this, const RuntimeMethod* method) ;
 // T UnityEngine.Component::GetComponent<UnityEngine.UI.Button>()
 inline Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* Component_GetComponent_TisButton_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098_mFF8BA4CA5D7158D1D6249559A3289E7A6DF0A2BB (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method)
 {
@@ -2836,6 +2829,13 @@ inline Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* Component_GetComponent_
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* Button_get_onClick_m701712A7F7F000CC80D517C4510697E15722C35C_inline (Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* __this, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Events.UnityEvent::Invoke()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityEvent_Invoke_mFBF80D59B03C30C5FE6A06F897D954ACADE061D2 (UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* __this, const RuntimeMethod* method) ;
+// T UnityEngine.Component::GetComponentInChildren<InteractObj>()
+inline InteractObj_t864685B5B03B423AC6BEFD744E65D155C2B646F5* Component_GetComponentInChildren_TisInteractObj_t864685B5B03B423AC6BEFD744E65D155C2B646F5_m7116D069F0684C098197FA17DE5A0E800C7DE05B (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method)
+{
+	return ((  InteractObj_t864685B5B03B423AC6BEFD744E65D155C2B646F5* (*) (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3*, const RuntimeMethod*))Component_GetComponentInChildren_TisRuntimeObject_mE483A27E876DE8E4E6901D6814837F81D7C42F65_gshared)(__this, method);
+}
+// System.Void InteractObj::Disable()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InteractObj_Disable_m1956B97DD12AF261C43527AAEB62E25BE3B0A79F (InteractObj_t864685B5B03B423AC6BEFD744E65D155C2B646F5* __this, const RuntimeMethod* method) ;
 // T UnityEngine.Component::GetComponent<InteractObj>()
 inline InteractObj_t864685B5B03B423AC6BEFD744E65D155C2B646F5* Component_GetComponent_TisInteractObj_t864685B5B03B423AC6BEFD744E65D155C2B646F5_m526AF10F1D95118A89EA09AC90B43782DDF4F92C (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method)
 {
@@ -6122,18 +6122,55 @@ IL_000e:
 		Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00 L_5;
 		L_5 = Camera_ScreenPointToRay_m2887B9A49880B7AB670C57D66B67D6A6689FE315(L_2, L_4, NULL);
 		__this->____ray_12 = L_5;
-		// if (Physics.Raycast(_ray, out _hit, _laycastDistance, _selectObjectLayer))
+		// if (Physics.Raycast(_ray, out _hit, Mathf.Infinity, _UILayer))
 		Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00 L_6 = __this->____ray_12;
 		RaycastHit_t6F30BD0B38B56401CA833A1B87BD74F2ACD2F2B5* L_7 = (&__this->____hit_13);
-		float L_8 = __this->____laycastDistance_8;
-		LayerMask_t97CB6BDADEDC3D6423C7BCFEA7F86DA2EC6241DB L_9 = __this->____selectObjectLayer_5;
-		int32_t L_10;
-		L_10 = LayerMask_op_Implicit_m7F5A5B9D079281AC445ED39DEE1FCFA9D795810D(L_9, NULL);
-		bool L_11;
-		L_11 = Physics_Raycast_m34AC1210E893A9EF969BD2C7104B10BE5B580025(L_6, L_7, L_8, L_10, NULL);
-		if (!L_11)
+		LayerMask_t97CB6BDADEDC3D6423C7BCFEA7F86DA2EC6241DB L_8 = __this->____UILayer_7;
+		int32_t L_9;
+		L_9 = LayerMask_op_Implicit_m7F5A5B9D079281AC445ED39DEE1FCFA9D795810D(L_8, NULL);
+		bool L_10;
+		L_10 = Physics_Raycast_m34AC1210E893A9EF969BD2C7104B10BE5B580025(L_6, L_7, (std::numeric_limits<float>::infinity()), L_9, NULL);
+		if (!L_10)
 		{
-			goto IL_0096;
+			goto IL_007d;
+		}
+	}
+	{
+		// Debug.Log("UI ???");
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralD4C9B780DA6A69B11A8D0B096802A100A37B88F0, NULL);
+		// _selectButton = _hit.transform.GetComponent<Button>();
+		RaycastHit_t6F30BD0B38B56401CA833A1B87BD74F2ACD2F2B5* L_11 = (&__this->____hit_13);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_12;
+		L_12 = RaycastHit_get_transform_m89DB7FCFC50E0213A37CBE089400064B8FA19155(L_11, NULL);
+		NullCheck(L_12);
+		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_13;
+		L_13 = Component_GetComponent_TisButton_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098_mFF8BA4CA5D7158D1D6249559A3289E7A6DF0A2BB(L_12, Component_GetComponent_TisButton_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098_mFF8BA4CA5D7158D1D6249559A3289E7A6DF0A2BB_RuntimeMethod_var);
+		__this->____selectButton_10 = L_13;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->____selectButton_10), (void*)L_13);
+		// _selectButton.onClick.Invoke();
+		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_14 = __this->____selectButton_10;
+		NullCheck(L_14);
+		ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_15;
+		L_15 = Button_get_onClick_m701712A7F7F000CC80D517C4510697E15722C35C_inline(L_14, NULL);
+		NullCheck(L_15);
+		UnityEvent_Invoke_mFBF80D59B03C30C5FE6A06F897D954ACADE061D2(L_15, NULL);
+	}
+
+IL_007d:
+	{
+		// if (Physics.Raycast(_ray, out _hit, _laycastDistance, _selectObjectLayer))
+		Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00 L_16 = __this->____ray_12;
+		RaycastHit_t6F30BD0B38B56401CA833A1B87BD74F2ACD2F2B5* L_17 = (&__this->____hit_13);
+		float L_18 = __this->____laycastDistance_8;
+		LayerMask_t97CB6BDADEDC3D6423C7BCFEA7F86DA2EC6241DB L_19 = __this->____selectObjectLayer_5;
+		int32_t L_20;
+		L_20 = LayerMask_op_Implicit_m7F5A5B9D079281AC445ED39DEE1FCFA9D795810D(L_19, NULL);
+		bool L_21;
+		L_21 = Physics_Raycast_m34AC1210E893A9EF969BD2C7104B10BE5B580025(L_16, L_17, L_18, L_20, NULL);
+		if (!L_21)
+		{
+			goto IL_00e8;
 		}
 	}
 	{
@@ -6141,77 +6178,34 @@ IL_000e:
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral66C80CC984CDD28BB6F1D9982F162BFCE4A9B0A2, NULL);
 		// InteractObj.SelectedObject = _hit.transform.GetComponentInChildren<InteractObj>();
-		RaycastHit_t6F30BD0B38B56401CA833A1B87BD74F2ACD2F2B5* L_12 = (&__this->____hit_13);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_13;
-		L_13 = RaycastHit_get_transform_m89DB7FCFC50E0213A37CBE089400064B8FA19155(L_12, NULL);
-		NullCheck(L_13);
-		InteractObj_t864685B5B03B423AC6BEFD744E65D155C2B646F5* L_14;
-		L_14 = Component_GetComponentInChildren_TisInteractObj_t864685B5B03B423AC6BEFD744E65D155C2B646F5_m7116D069F0684C098197FA17DE5A0E800C7DE05B(L_13, Component_GetComponentInChildren_TisInteractObj_t864685B5B03B423AC6BEFD744E65D155C2B646F5_m7116D069F0684C098197FA17DE5A0E800C7DE05B_RuntimeMethod_var);
-		InteractObj_set_SelectedObject_m3EA21BB05BD7E5BB0E2109A9D160932CEEAF5B37(L_14, NULL);
+		RaycastHit_t6F30BD0B38B56401CA833A1B87BD74F2ACD2F2B5* L_22 = (&__this->____hit_13);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_23;
+		L_23 = RaycastHit_get_transform_m89DB7FCFC50E0213A37CBE089400064B8FA19155(L_22, NULL);
+		NullCheck(L_23);
+		InteractObj_t864685B5B03B423AC6BEFD744E65D155C2B646F5* L_24;
+		L_24 = Component_GetComponentInChildren_TisInteractObj_t864685B5B03B423AC6BEFD744E65D155C2B646F5_m7116D069F0684C098197FA17DE5A0E800C7DE05B(L_23, Component_GetComponentInChildren_TisInteractObj_t864685B5B03B423AC6BEFD744E65D155C2B646F5_m7116D069F0684C098197FA17DE5A0E800C7DE05B_RuntimeMethod_var);
+		InteractObj_set_SelectedObject_m3EA21BB05BD7E5BB0E2109A9D160932CEEAF5B37(L_24, NULL);
 		// hitCount++;
-		int32_t L_15 = __this->___hitCount_14;
-		__this->___hitCount_14 = ((int32_t)il2cpp_codegen_add(L_15, 1));
+		int32_t L_25 = __this->___hitCount_14;
+		__this->___hitCount_14 = ((int32_t)il2cpp_codegen_add(L_25, 1));
 		// if (hitCount > 1)
-		int32_t L_16 = __this->___hitCount_14;
-		if ((((int32_t)L_16) <= ((int32_t)1)))
+		int32_t L_26 = __this->___hitCount_14;
+		if ((((int32_t)L_26) <= ((int32_t)1)))
 		{
-			goto IL_0095;
+			goto IL_00e8;
 		}
 	}
 	{
 		// InteractObj.SelectedObject.Disable();
-		InteractObj_t864685B5B03B423AC6BEFD744E65D155C2B646F5* L_17;
-		L_17 = InteractObj_get_SelectedObject_mFB3C932EB23F5AF08A785685A93CF850844375B9_inline(NULL);
-		NullCheck(L_17);
-		InteractObj_Disable_m1956B97DD12AF261C43527AAEB62E25BE3B0A79F(L_17, NULL);
+		InteractObj_t864685B5B03B423AC6BEFD744E65D155C2B646F5* L_27;
+		L_27 = InteractObj_get_SelectedObject_mFB3C932EB23F5AF08A785685A93CF850844375B9_inline(NULL);
+		NullCheck(L_27);
+		InteractObj_Disable_m1956B97DD12AF261C43527AAEB62E25BE3B0A79F(L_27, NULL);
 		// hitCount = 0;
 		__this->___hitCount_14 = 0;
 	}
 
-IL_0095:
-	{
-		// return;
-		return;
-	}
-
-IL_0096:
-	{
-		// if (Physics.Raycast(_ray, out _hit, Mathf.Infinity, _UILayer))
-		Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00 L_18 = __this->____ray_12;
-		RaycastHit_t6F30BD0B38B56401CA833A1B87BD74F2ACD2F2B5* L_19 = (&__this->____hit_13);
-		LayerMask_t97CB6BDADEDC3D6423C7BCFEA7F86DA2EC6241DB L_20 = __this->____UILayer_7;
-		int32_t L_21;
-		L_21 = LayerMask_op_Implicit_m7F5A5B9D079281AC445ED39DEE1FCFA9D795810D(L_20, NULL);
-		bool L_22;
-		L_22 = Physics_Raycast_m34AC1210E893A9EF969BD2C7104B10BE5B580025(L_18, L_19, (std::numeric_limits<float>::infinity()), L_21, NULL);
-		if (!L_22)
-		{
-			goto IL_00e9;
-		}
-	}
-	{
-		// Debug.Log("UI ???");
-		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralD4C9B780DA6A69B11A8D0B096802A100A37B88F0, NULL);
-		// _selectButton =  _hit.transform.GetComponent<Button>();
-		RaycastHit_t6F30BD0B38B56401CA833A1B87BD74F2ACD2F2B5* L_23 = (&__this->____hit_13);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_24;
-		L_24 = RaycastHit_get_transform_m89DB7FCFC50E0213A37CBE089400064B8FA19155(L_23, NULL);
-		NullCheck(L_24);
-		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_25;
-		L_25 = Component_GetComponent_TisButton_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098_mFF8BA4CA5D7158D1D6249559A3289E7A6DF0A2BB(L_24, Component_GetComponent_TisButton_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098_mFF8BA4CA5D7158D1D6249559A3289E7A6DF0A2BB_RuntimeMethod_var);
-		__this->____selectButton_10 = L_25;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->____selectButton_10), (void*)L_25);
-		// _selectButton.onClick.Invoke();
-		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_26 = __this->____selectButton_10;
-		NullCheck(L_26);
-		ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_27;
-		L_27 = Button_get_onClick_m701712A7F7F000CC80D517C4510697E15722C35C_inline(L_26, NULL);
-		NullCheck(L_27);
-		UnityEvent_Invoke_mFBF80D59B03C30C5FE6A06F897D954ACADE061D2(L_27, NULL);
-	}
-
-IL_00e9:
+IL_00e8:
 	{
 		// if (Physics.Raycast(_ray, out _hit, _laycastDistance, _eatObjectLayer))
 		Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00 L_28 = __this->____ray_12;
@@ -6224,7 +6218,7 @@ IL_00e9:
 		L_33 = Physics_Raycast_m34AC1210E893A9EF969BD2C7104B10BE5B580025(L_28, L_29, L_30, L_32, NULL);
 		if (!L_33)
 		{
-			goto IL_0177;
+			goto IL_0176;
 		}
 	}
 	{
@@ -6240,7 +6234,7 @@ IL_00e9:
 		L_36 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_35, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 		if (L_36)
 		{
-			goto IL_0155;
+			goto IL_0154;
 		}
 	}
 	{
@@ -6252,7 +6246,7 @@ IL_00e9:
 		L_39 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_38, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 		if (!L_39)
 		{
-			goto IL_0156;
+			goto IL_0155;
 		}
 	}
 	{
@@ -6267,17 +6261,17 @@ IL_00e9:
 		L_43 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_42, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 		if (!L_43)
 		{
-			goto IL_0156;
+			goto IL_0155;
 		}
 	}
 
-IL_0155:
+IL_0154:
 	{
 		// if (_hit.transform == null || (_hit.transform != null && _hit.transform.GetComponent<InteractObj>() == null)) return;
 		return;
 	}
 
-IL_0156:
+IL_0155:
 	{
 		// _interactObj = _hit.transform.GetComponent<InteractObj>();
 		RaycastHit_t6F30BD0B38B56401CA833A1B87BD74F2ACD2F2B5* L_44 = (&__this->____hit_13);
@@ -6294,7 +6288,7 @@ IL_0156:
 		InteractObj_DestroyObj_mCDE549F91968AA2866BAA40990313F6F0F7BF0FD(L_47, NULL);
 	}
 
-IL_0177:
+IL_0176:
 	{
 		// }
 		return;
