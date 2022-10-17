@@ -37,5 +37,4 @@ public class CharacterRandomMove : MonoBehaviour
         }
         _moveCooltimeCount++;
     }
-
 }
