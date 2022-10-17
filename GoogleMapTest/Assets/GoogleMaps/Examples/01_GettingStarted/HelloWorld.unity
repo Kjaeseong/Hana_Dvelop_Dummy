@@ -688,7 +688,6 @@ GameObject:
   m_Component:
   - component: {fileID: 910068126}
   - component: {fileID: 910068125}
-  - component: {fileID: 910068129}
   - component: {fileID: 910068124}
   - component: {fileID: 910068127}
   - component: {fileID: 910068128}
@@ -860,8 +859,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LatLng:
-    _Lat: 37.540379
-    _Lng: 127.12452600000006
+    _Lat: 37.538895
+    _Lng: 127.12348900000006
   GPSManager: {fileID: 61167835}
 --- !u!4 &910068126
 Transform:
@@ -908,23 +907,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: f8a8a8a35863fde4989b51d807bf7b1f, type: 2}
   _AI_test: {fileID: 6348611037806450371, guid: b252ec68a47c4d542911c5c13e9d2088, type: 3}
   _Position_Test: {fileID: 826676690878647091, guid: 2bfdf38187badd84b9bb4ff7ee3088c0, type: 3}
---- !u!114 &910068129
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 910068123}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4fd68de5150bec438c5206ed47c5d7a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LatLng:
-    _Lat: 0
-    _Lng: 0
-  _PositiontestBox: {fileID: 826676690878647091, guid: 2bfdf38187badd84b9bb4ff7ee3088c0, type: 3}
-  GPSManager: {fileID: 61167835}
+  Destination_Name: ExtrudedStructure (ChIJvbnOXFWlfDURQaNjy7fTbdo)
 --- !u!1001 &1040466400
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1358,7 +1341,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2108533620}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1930896577
 PrefabInstance:
@@ -1603,8 +1586,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1540129926}
-  - {fileID: 2141697252}
   - {fileID: 1916175773}
+  - {fileID: 2141697252}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1702,5 +1685,5 @@ Transform:
   m_Children:
   - {fileID: 876101782}
   m_Father: {fileID: 2108533620}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

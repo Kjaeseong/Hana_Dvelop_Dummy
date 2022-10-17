@@ -10,7 +10,6 @@ namespace Google.Maps.Examples
     [RequireComponent(typeof(MapsService))]
     public class SetBuildingMat : MonoBehaviour
     {
-
         [SerializeField]
         private MeshRenderer[] _mesh;
         //private List<MeshRenderer> list = new List<MeshRenderer>();
@@ -23,13 +22,15 @@ namespace Google.Maps.Examples
 
         [SerializeField]
         private GameObject _Position_Test;
-       
+        
         private MapsService _mapsService;
         private LatLng _latLng;
 
-        private float _coord_x_Control = 3.5f;
-        private float _coord_z_Control = 3.5f;
+        private float _coord_x_Control = 5f;
+        private float _coord_z_Control = 5f;
         private float _basePlateHigh = 0.5f;
+
+        public string Destination_Name;
 
         private void Start()
         {
@@ -69,7 +70,7 @@ namespace Google.Maps.Examples
         private void FindBuilding()
         {
             // 건물의 이름을 찾아 넣는다. 이 부분은 추후 [배열] 형태로 만들어 확장성 가능하게 만들 수 있음.
-            GameObject testBuilding = GameObject.Find("ExtrudedStructure (ChIJVfE8QFWlfDURXCkCNgT2X_g)");
+            GameObject testBuilding = GameObject.Find(Destination_Name);
             Vector3 TestBuildingPos = testBuilding.transform.position;
 
             // 오브젝트를 해당 건물의 주변에 원하는 위치에 생성한다. 이 부분 또한 위치 로케이션 오브젝트를 추가하여
