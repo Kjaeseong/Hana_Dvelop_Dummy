@@ -49,6 +49,7 @@ namespace Google.Maps.Examples
                 renderer.gameObject.AddComponent<MeshCollider>();
                 renderer.gameObject.AddComponent<NavMeshSourceTag>();
             }
+
             FindBuilding();
             //Instantiate(_AI_test, new Vector3(0, 0.5f, 0), Quaternion.identity);
             //Instantiate(_PositiontestBox, new Vector3(0, 0.5f, 0), Quaternion.identity);
@@ -67,10 +68,12 @@ namespace Google.Maps.Examples
         /// </summary>
         private void FindBuilding()
         {
-            // 건물의 이름을 찾아 넣는다.
+            // 건물의 이름을 찾아 넣는다. 이 부분은 추후 [배열] 형태로 만들어 확장성 가능하게 만들 수 있음.
             GameObject testBuilding = GameObject.Find("ExtrudedStructure (ChIJVfE8QFWlfDURXCkCNgT2X_g)");
             Vector3 TestBuildingPos = testBuilding.transform.position;
-            // 오브젝트를 해당 건물의 주변에 원하는 위치에 생성한다.
+
+            // 오브젝트를 해당 건물의 주변에 원하는 위치에 생성한다. 이 부분 또한 위치 로케이션 오브젝트를 추가하여
+            // 확장성을 높일 수 있음.
             Instantiate(_Position_Test, new Vector3(TestBuildingPos.x - _coord_x_Control, _basePlateHigh, TestBuildingPos.z - _coord_z_Control), 
                 Quaternion.identity);
         }
