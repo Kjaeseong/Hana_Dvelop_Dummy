@@ -1,5 +1,6 @@
 {
   "dependencies": {
+<<<<<<< Updated upstream
     "com.google.ar.core.arfoundation.extensions": {
       "version": "https://github.com/google-ar/arcore-unity-extensions.git",
       "depth": 0,
@@ -11,6 +12,8 @@
       },
       "hash": "55208a5317c2402e55ed7f931c16288d6a2b7756"
     },
+=======
+>>>>>>> Stashed changes
     "com.unity.collab-proxy": {
       "version": "1.17.2",
       "depth": 0,
@@ -20,6 +23,7 @@
       },
       "url": "https://packages.unity.com"
     },
+<<<<<<< Updated upstream
     "com.unity.editorcoroutines": {
       "version": "1.0.0",
       "depth": 2,
@@ -27,6 +31,8 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+=======
+>>>>>>> Stashed changes
     "com.unity.ext.nunit": {
       "version": "1.0.6",
       "depth": 1,
@@ -68,6 +74,7 @@
       },
       "url": "https://packages.unity.com"
     },
+<<<<<<< Updated upstream
     "com.unity.subsystemregistration": {
       "version": "1.1.0",
       "depth": 2,
@@ -77,6 +84,8 @@
       },
       "url": "https://packages.unity.com"
     },
+=======
+>>>>>>> Stashed changes
     "com.unity.test-framework": {
       "version": "1.1.31",
       "depth": 0,
@@ -118,6 +127,7 @@
         "com.unity.modules.imgui": "1.0.0"
       }
     },
+<<<<<<< Updated upstream
     "com.unity.xr.arcore": {
       "version": "4.1.12",
       "depth": 0,
@@ -184,6 +194,8 @@
       },
       "url": "https://packages.unity.com"
     },
+=======
+>>>>>>> Stashed changes
     "com.unity.modules.ai": {
       "version": "1.0.0",
       "depth": 0,
