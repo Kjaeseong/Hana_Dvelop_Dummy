@@ -13,15 +13,18 @@ namespace Google.Maps.Examples {
   /// </remarks>
   [RequireComponent(typeof(MapsService))]
   public class BasicExample : MonoBehaviour {
-    [Tooltip("LatLng to load (must be set before hitting play).")]
-    public LatLng LatLng = new LatLng(40.6892199, -74.044601);
+        [SerializeField]
+        [Tooltip("LatLng to load (must be set before hitting play).")]
+        private LatLng LatLng;
+
+        private MapsService mapsService;
 
     /// <summary>
     /// Use <see cref="MapsService"/> to load geometry.
     /// </summary>
     private void Start() {
       // Get required MapsService component on this GameObject.
-      MapsService mapsService = GetComponent<MapsService>();
+      mapsService = GetComponent<MapsService>();
 
       // Set real-world location to load.
       mapsService.InitFloatingOrigin(LatLng);
@@ -30,8 +33,13 @@ namespace Google.Maps.Examples {
       mapsService.Events.MapEvents.Loaded.AddListener(OnLoaded);
 
       // Load map with default options.
-      mapsService.LoadMap(ExampleDefaults.DefaultBounds, ExampleDefaults.DefaultGameObjectOptions);
+      // mapsService.LoadMap(ExampleDefaults.DefaultBounds, ExampleDefaults.DefaultGameObjectOptions);
     }
+
+        public void LoadMapOnClicked()
+        {
+            mapsService.LoadMap(ExampleDefaults.DefaultBounds, ExampleDefaults.DefaultGameObjectOptions);
+        }
 
     /// <summary>
     /// Example of OnLoaded event listener.
