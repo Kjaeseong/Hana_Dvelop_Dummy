@@ -5,24 +5,25 @@ using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
 {
-    //private
     [SerializeField] Button[] _button;
+    [SerializeField] GameObject[] _panel;
     [SerializeField] Inventory _inven;
+
+    private bool _showPanel = false;
 
     private void OnEnable()
     {
-        //_inven.GetItem.AddListener(CheckInventory);
+        _inven.GetItem.AddListener(CheckInventory);
     }
 
     private void Start()
     {
         _inven.GetItem.AddListener(CheckInventory);
-
-        int _childCount = transform.childCount;
-        Debug.Log(_childCount);
-        _button = new Button[_childCount];
-
-        _button = GetComponentsInChildren<Button>();
+        
+        for (int i = 0; i < _panel.Length; ++i)
+        {
+            _panel[i].SetActive(false);
+        }
 
         CheckInventory();
     }
@@ -46,6 +47,12 @@ public class InventoryManager : MonoBehaviour
                 _image.sprite = _inven.ItemInInventory[i].ItemImage.sprite;
             }
         }
+    }
+
+    public void ShowPanel(int index)
+    {
+        _showPanel = !_showPanel;
+        _panel[index].SetActive(_showPanel);
     }
 
     private void OnDisable()

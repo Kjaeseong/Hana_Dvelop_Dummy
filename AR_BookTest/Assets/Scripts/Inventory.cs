@@ -50,6 +50,6 @@ public class Inventory : MonoBehaviour
         {
             ItemInInventory[index] = null;
         }
-        
+
     }
 }
