@@ -1,4 +1,3 @@
-using TMPro;
 using UnityEngine;
 
 public class InteractObj : MonoBehaviour
@@ -53,7 +52,9 @@ public class InteractObj : MonoBehaviour
     public void DestroyObj()
     {
         Debug.Log("오브젝트 파괴");
-        Destroy(transform.parent.gameObject); //해당 오브젝트의 부모를 파괴를 하여 부모 및 자신 파괴
+
+        //해당 오브젝트의 부모를 파괴를 하여 부모 및 자신 파괴 부모가 없거나 다른 오브젝트를 파괴를 바랄시 Destroy 추가 혹은 수정 바람
+        Destroy(transform.parent.gameObject); 
         InteractObj.SelectedObject = null;
         GetPoint();
     }

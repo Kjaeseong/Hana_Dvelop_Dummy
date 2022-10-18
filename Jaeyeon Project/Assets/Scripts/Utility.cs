@@ -31,6 +31,8 @@ public class Utility
     }
 
     #endregion
+
+    #region 입력 여부 true or false
     public static bool TryGetInputPosition(out Vector3 position)
     {
         position = Vector3.zero; 
@@ -48,4 +50,5 @@ public class Utility
         }
         return true;
     }
+    #endregion
 }
