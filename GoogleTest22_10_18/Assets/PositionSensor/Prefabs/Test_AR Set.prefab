@@ -399,7 +399,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6415393891246016305}
   m_Layer: 0
-  m_Name: AR Set
+  m_Name: Test_AR Set
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

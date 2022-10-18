@@ -2772,7 +2772,7 @@ GameObject:
   - component: {fileID: 164532775131070022}
   - component: {fileID: 164532775131070020}
   m_Layer: 0
-  m_Name: SettingUI
+  m_Name: Test_SettingUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

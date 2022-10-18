@@ -28,10 +28,7 @@ public class PositionSensorUI : MonoBehaviour
 
     public void RotationMapAzimuth()
     {
-        _map.transform.rotation = Quaternion.Euler(
-            _map.transform.rotation.eulerAngles.x,
-            -1 * (float)_pos.GetAzimuth(),
-            _map.transform.rotation.eulerAngles.z);
+        _map.transform.rotation = Quaternion.Euler(0f, -1 * (float)_pos.GetAzimuth(), 0f);
     }
 
     public void TextSet()

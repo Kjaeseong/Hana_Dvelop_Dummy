@@ -393,6 +393,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1126125494387651434, guid: 186854f7d17850143b5fbe5e3ac89f46, type: 3}
+      propertyPath: LatLng._Lat
+      value: 37.5386
+      objectReference: {fileID: 0}
+    - target: {fileID: 1126125494387651434, guid: 186854f7d17850143b5fbe5e3ac89f46, type: 3}
+      propertyPath: LatLng._Lng
+      value: 127.12339999999995
+      objectReference: {fileID: 0}
     - target: {fileID: 1126125494387651436, guid: 186854f7d17850143b5fbe5e3ac89f46, type: 3}
       propertyPath: m_Name
       value: Basic Example Script

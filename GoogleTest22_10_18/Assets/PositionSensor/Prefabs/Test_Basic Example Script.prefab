@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1126125494387651435}
   - component: {fileID: 1126125494387651432}
   m_Layer: 0
-  m_Name: Basic Example Script
+  m_Name: Test_Basic Example Script
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

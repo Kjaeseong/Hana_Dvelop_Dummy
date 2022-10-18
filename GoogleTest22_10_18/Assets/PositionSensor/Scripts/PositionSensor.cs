@@ -139,6 +139,8 @@ public class PositionSensor : MonoBehaviour
         return _pose.Heading;
     }
 
+    
+
     /// <summary>
     /// 위/경도 기준 A에서 B까지의 거리 반환(구체 표면거리, 미터(M) 기준)
     /// </summary>
