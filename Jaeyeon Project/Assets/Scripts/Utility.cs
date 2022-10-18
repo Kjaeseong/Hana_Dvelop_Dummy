@@ -31,9 +31,9 @@ public class Utility
     }
 
     #endregion
-    public static bool TryGetInputPosition(out Vector2 position)
+    public static bool TryGetInputPosition(out Vector3 position)
     {
-        position = Vector2.zero; 
+        position = Vector3.zero; 
 
         if(Input.touchCount ==0)
         {

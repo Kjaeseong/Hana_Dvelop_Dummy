@@ -21,7 +21,7 @@ public class Selection : MonoBehaviour
     private InteractObj                 _interactObj;
     private Button                      _selectButton;
 
-    private Vector2                     _touchPose;
+    private Vector3                     _touchPose;
     private Ray                         _ray;
     private RaycastHit                  _hit;
 
@@ -57,7 +57,6 @@ public class Selection : MonoBehaviour
             _selectButton.onClick.Invoke();
         }
 
-
         //해당 레이어 마스크를 가진 오브젝트 에 한번 터치 시 카운트가 증가하고 한번 더 클릭하면 UI캔버스가 꺼짐과 동시에 히트카운트 0으로 초기화
         if (Physics.Raycast(_ray, out _hit, _laycastDistance, _selectObjectLayer))
         {
@@ -70,8 +69,6 @@ public class Selection : MonoBehaviour
                 hitCount = 0;
             }
         }
-
-
 
         // UI버튼을 통하지않고 바로 상호작용이 필요할 시 오브젝트의 메서드 호출을 바로 할 수 있음
         if (Physics.Raycast(_ray, out _hit, _laycastDistance, _eatObjectLayer))
