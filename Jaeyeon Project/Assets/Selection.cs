@@ -15,15 +15,15 @@ public class Selection : MonoBehaviour
     [SerializeField] private LayerMask  _eatObjectLayer;
     [SerializeField] private LayerMask  _UILayer;
     [SerializeField] private float      _laycastDistance;
+    private Vector3                     _touchPose;
+    private Ray                         _ray;
+    private RaycastHit                  _hit;
+
     // 클릭시 해당 오브젝트 생성
     // [SerializeField] private GameObject _placePrefab;
 
     private InteractObj                 _interactObj;
     private Button                      _selectButton;
-
-    private Vector3                     _touchPose;
-    private Ray                         _ray;
-    private RaycastHit                  _hit;
 
     public int hitCount;
     
@@ -31,7 +31,11 @@ public class Selection : MonoBehaviour
     private void Update()
     {
         //터치시 포지션 위치 내보냄
-        if (!Utility.TryGetInputPosition(out _touchPose)) return;
+        if (Utility.TryGetInputPosition(out _touchPose))
+        {
+            RaycastCall();
+        }
+        else return;
 
         #region 클릭시 오브젝트 생성
         /*
@@ -42,10 +46,12 @@ public class Selection : MonoBehaviour
         */
         #endregion
 
+    }
+    #region 레이케스팅
+    private void RaycastCall()
+    {
         //터치시 카메라의 터치포지션을 레이케스트에 위치대입
         _ray = _camera.ScreenPointToRay(_touchPose);
-
-        #region 레이케스팅
 
         //_UILayer 레이어마스크를 클릭시 버튼 클릭하는 것 과 같은 버튼 클릭 형식으로 OnClick 이벤트에 있는 매서드 Invoke
         //버튼 이벤트를 호출 하기 위해선 버튼 컴포넌트, EventSystem 필요
@@ -77,8 +83,8 @@ public class Selection : MonoBehaviour
             if (_hit.transform == null || (_hit.transform != null && _hit.transform.GetComponent<InteractObj>() == null)) return;
 
             _interactObj = _hit.transform.GetComponent<InteractObj>();
-           _interactObj.DestroyObj();
+            _interactObj.DestroyObj();
         }
-        #endregion
     }
+    #endregion
 }

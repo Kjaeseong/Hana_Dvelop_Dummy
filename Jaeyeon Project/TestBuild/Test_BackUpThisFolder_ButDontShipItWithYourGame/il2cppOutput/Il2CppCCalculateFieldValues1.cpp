@@ -18889,16 +18889,16 @@ struct Selection_tC3273612256235F7FCFBC6A2337AA1DC7FB19538  : public MonoBehavio
 	LayerMask_t97CB6BDADEDC3D6423C7BCFEA7F86DA2EC6241DB ____UILayer_7;
 	// System.Single Selection::_laycastDistance
 	float ____laycastDistance_8;
-	// InteractObj Selection::_interactObj
-	InteractObj_t864685B5B03B423AC6BEFD744E65D155C2B646F5* ____interactObj_9;
-	// UnityEngine.UI.Button Selection::_selectButton
-	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ____selectButton_10;
-	// UnityEngine.Vector2 Selection::_touchPose
-	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ____touchPose_11;
+	// UnityEngine.Vector3 Selection::_touchPose
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ____touchPose_9;
 	// UnityEngine.Ray Selection::_ray
-	Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00 ____ray_12;
+	Ray_t2B1742D7958DC05BDC3EFC7461D3593E1430DC00 ____ray_10;
 	// UnityEngine.RaycastHit Selection::_hit
-	RaycastHit_t6F30BD0B38B56401CA833A1B87BD74F2ACD2F2B5 ____hit_13;
+	RaycastHit_t6F30BD0B38B56401CA833A1B87BD74F2ACD2F2B5 ____hit_11;
+	// InteractObj Selection::_interactObj
+	InteractObj_t864685B5B03B423AC6BEFD744E65D155C2B646F5* ____interactObj_12;
+	// UnityEngine.UI.Button Selection::_selectButton
+	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ____selectButton_13;
 	// System.Int32 Selection::hitCount
 	int32_t ___hitCount_14;
 };
@@ -23978,7 +23978,7 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4660[2] =
 	static_cast<int32_t>(offsetof(Utility_t229A905233923073FC38E05AC74BBCB12DF3CA7B_StaticFields, ____raycastManager_0)),static_cast<int32_t>(offsetof(Utility_t229A905233923073FC38E05AC74BBCB12DF3CA7B_StaticFields, ____hits_1)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4661[11] = 
 {
-	static_cast<int32_t>(offsetof(Selection_tC3273612256235F7FCFBC6A2337AA1DC7FB19538, ____camera_4)),static_cast<int32_t>(offsetof(Selection_tC3273612256235F7FCFBC6A2337AA1DC7FB19538, ____selectObjectLayer_5)),static_cast<int32_t>(offsetof(Selection_tC3273612256235F7FCFBC6A2337AA1DC7FB19538, ____eatObjectLayer_6)),static_cast<int32_t>(offsetof(Selection_tC3273612256235F7FCFBC6A2337AA1DC7FB19538, ____UILayer_7)),static_cast<int32_t>(offsetof(Selection_tC3273612256235F7FCFBC6A2337AA1DC7FB19538, ____laycastDistance_8)),static_cast<int32_t>(offsetof(Selection_tC3273612256235F7FCFBC6A2337AA1DC7FB19538, ____interactObj_9)),static_cast<int32_t>(offsetof(Selection_tC3273612256235F7FCFBC6A2337AA1DC7FB19538, ____selectButton_10)),static_cast<int32_t>(offsetof(Selection_tC3273612256235F7FCFBC6A2337AA1DC7FB19538, ____touchPose_11)),static_cast<int32_t>(offsetof(Selection_tC3273612256235F7FCFBC6A2337AA1DC7FB19538, ____ray_12)),static_cast<int32_t>(offsetof(Selection_tC3273612256235F7FCFBC6A2337AA1DC7FB19538, ____hit_13)),static_cast<int32_t>(offsetof(Selection_tC3273612256235F7FCFBC6A2337AA1DC7FB19538, ___hitCount_14)),};
+	static_cast<int32_t>(offsetof(Selection_tC3273612256235F7FCFBC6A2337AA1DC7FB19538, ____camera_4)),static_cast<int32_t>(offsetof(Selection_tC3273612256235F7FCFBC6A2337AA1DC7FB19538, ____selectObjectLayer_5)),static_cast<int32_t>(offsetof(Selection_tC3273612256235F7FCFBC6A2337AA1DC7FB19538, ____eatObjectLayer_6)),static_cast<int32_t>(offsetof(Selection_tC3273612256235F7FCFBC6A2337AA1DC7FB19538, ____UILayer_7)),static_cast<int32_t>(offsetof(Selection_tC3273612256235F7FCFBC6A2337AA1DC7FB19538, ____laycastDistance_8)),static_cast<int32_t>(offsetof(Selection_tC3273612256235F7FCFBC6A2337AA1DC7FB19538, ____touchPose_9)),static_cast<int32_t>(offsetof(Selection_tC3273612256235F7FCFBC6A2337AA1DC7FB19538, ____ray_10)),static_cast<int32_t>(offsetof(Selection_tC3273612256235F7FCFBC6A2337AA1DC7FB19538, ____hit_11)),static_cast<int32_t>(offsetof(Selection_tC3273612256235F7FCFBC6A2337AA1DC7FB19538, ____interactObj_12)),static_cast<int32_t>(offsetof(Selection_tC3273612256235F7FCFBC6A2337AA1DC7FB19538, ____selectButton_13)),static_cast<int32_t>(offsetof(Selection_tC3273612256235F7FCFBC6A2337AA1DC7FB19538, ___hitCount_14)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4662[5] = 
 {
 	static_cast<int32_t>(offsetof(GeospatialAnchorHistory_t6908A396462F1450B5999D2948632194CD812A5C, ___SerializedTime_0)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(GeospatialAnchorHistory_t6908A396462F1450B5999D2948632194CD812A5C, ___Latitude_1)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(GeospatialAnchorHistory_t6908A396462F1450B5999D2948632194CD812A5C, ___Longitude_2)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(GeospatialAnchorHistory_t6908A396462F1450B5999D2948632194CD812A5C, ___Altitude_3)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(GeospatialAnchorHistory_t6908A396462F1450B5999D2948632194CD812A5C, ___Heading_4)) + static_cast<int32_t>(sizeof(RuntimeObject)),};

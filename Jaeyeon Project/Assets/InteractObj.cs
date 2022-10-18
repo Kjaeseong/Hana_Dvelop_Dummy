@@ -53,7 +53,7 @@ public class InteractObj : MonoBehaviour
     public void DestroyObj()
     {
         Debug.Log("오브젝트 파괴");
-        Destroy(transform.parent.gameObject);
+        Destroy(transform.parent.gameObject); //해당 오브젝트의 부모를 파괴를 하여 부모 및 자신 파괴
         InteractObj.SelectedObject = null;
         GetPoint();
     }
@@ -69,5 +69,6 @@ public class InteractObj : MonoBehaviour
     {
         Debug.Log("점수 획득");
     }
+    
     #endregion 
 }
