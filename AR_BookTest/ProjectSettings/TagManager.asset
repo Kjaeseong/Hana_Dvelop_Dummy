@@ -4,8 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Item1
-  - Item2
+  - Collectable
   layers:
   - Default
   - TransparentFX

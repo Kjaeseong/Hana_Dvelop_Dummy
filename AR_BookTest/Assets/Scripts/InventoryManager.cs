@@ -11,24 +11,20 @@ public class InventoryManager : MonoBehaviour
 
     private bool _showPanel = false;
 
-    private void OnEnable()
-    {
-        _inven.GetItem.AddListener(CheckInventory);
-    }
-
     private void Start()
     {
-        _inven.GetItem.AddListener(CheckInventory);
-        
         for (int i = 0; i < _panel.Length; ++i)
         {
             _panel[i].SetActive(false);
         }
+    }
 
+    private void Update()
+    {
         CheckInventory();
     }
 
-    public void CheckInventory()
+    private void CheckInventory()
     {
         for (int i = 0; i < _inven.ItemInInventory.Length; ++i)
         {
@@ -49,14 +45,37 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
+    public void UseItem(int index)
+    {
+        if (_inven.ItemInInventory[index].ItemCount >= 1)
+        {
+            --_inven.ItemInInventory[index].ItemCount;
+            // TODO: 아이템 사용효과
+        }
+
+        if(_inven.ItemInInventory[index].ItemCount == 0)
+        {
+            _inven.ItemInInventory[index] = null;
+        }
+
+    }
+
+    public void DeleteItem(int index)
+    {
+        if (_inven.ItemInInventory[index].ItemCount >= 1)
+        {
+            --_inven.ItemInInventory[index].ItemCount;
+        }
+
+        if (_inven.ItemInInventory[index].ItemCount == 0)
+        {
+            _inven.ItemInInventory[index] = null;
+        }
+    }
+
     public void ShowPanel(int index)
     {
         _showPanel = !_showPanel;
         _panel[index].SetActive(_showPanel);
-    }
-
-    private void OnDisable()
-    {
-        _inven.GetItem.RemoveListener(CheckInventory);
     }
 }

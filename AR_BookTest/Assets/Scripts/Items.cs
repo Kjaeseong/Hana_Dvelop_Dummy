@@ -14,8 +14,8 @@ public class Items : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ItemName = gameObject.tag;
-        ItemCount = 1;
+        ItemName = gameObject.name;
+        ItemCount = 0;
         ItemImage = GetComponent<Image>();
     }
 }
