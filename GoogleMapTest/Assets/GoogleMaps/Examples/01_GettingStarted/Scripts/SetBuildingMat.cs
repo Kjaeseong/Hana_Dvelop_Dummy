@@ -34,12 +34,12 @@ namespace Google.Maps.Examples
         private MapsService _mapsService;
         private AI_NaviTest _ai_Navitest;
 
+        // 첫 번째 로케이션에 해당하는 오브젝트 위치 조절값
+        private float _coord_x_Control = 25f;
+        private float _coord_z_Control = 25f;
+
         // 목적지 건물에 해당하는 이름
         public string[] Destination_Name;
-
-        // 첫 번째 로케이션에 해당하는 오브젝트 위치 조절값
-        public float _coord_x_Control = 10f;
-        public float _coord_z_Control = 10f;
 
         // 첫 번째 로케이션에 해당하는 건물 좌표
         public float Destination_Lat;
@@ -124,6 +124,6 @@ namespace Google.Maps.Examples
             //_ai_Navitest.TestDestination = Instantiate(_Position_Test, new Vector3(TestBuildingPos.x - _coord_x_Control, _basePlateHigh, TestBuildingPos.z - _coord_z_Control),
             //    Quaternion.identity);
 
-        }   
+        }
     }
 }
