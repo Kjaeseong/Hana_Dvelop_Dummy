@@ -70,7 +70,4 @@ public class HeightChecker : MonoBehaviour
             -1 * _cameraH, 
             _map.transform.position.z);
     }
-
-
-
 }
