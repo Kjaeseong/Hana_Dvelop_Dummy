@@ -64,6 +64,7 @@ namespace Google.Maps.Examples
             {
                 FindBuilding();
                 _countTime--;
+               _ai_Navitest.makePath();
             }
         }
 
