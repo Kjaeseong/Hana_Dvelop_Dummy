@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.ARFoundation;
 
 public class TestInput : MonoBehaviour
 {
@@ -11,24 +12,44 @@ public class TestInput : MonoBehaviour
 
     private Items _item;
 
+    private ARRaycastManager _raycastMgr;
+    private List<ARRaycastHit> _hits = new List<ARRaycastHit>();
+    private GameObject _selectObject;
+
+    [SerializeField] Camera _arCamera;
+
     void Start()
     {
         _inven = GetComponent<Inventory>();
+        _raycastMgr = GetComponent<ARRaycastManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.touchCount == 0)
         {
-            _item = _item1.GetComponent<Items>();
-            _inven.AddItem(_item);
+            return;
         }
 
-        if (Input.GetMouseButtonDown(1))
+        Touch _touch = Input.GetTouch(0);
+
+        if(_touch.phase == TouchPhase.Began)
         {
-            _item = _item2.GetComponent<Items>();
-            _inven.AddItem(_item);
+            Ray _ray;
+            RaycastHit _hit;
+
+            _ray = _arCamera.ScreenPointToRay(_touch.position);
+
+            if (Physics.Raycast(_ray, out _hit))
+            {
+                if (_hit.collider.tag == "Collectable")
+                {
+                    _selectObject = _hit.collider.gameObject;
+                    _item = _selectObject.GetComponent<Items>();
+                    _inven.AddItem(_item);
+                }
+            }
         }
     }
 }
