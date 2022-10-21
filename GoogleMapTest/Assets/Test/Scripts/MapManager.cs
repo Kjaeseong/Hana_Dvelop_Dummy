@@ -26,17 +26,20 @@ public class MapManager : MonoBehaviour
 
     IEnumerator LoadMap()
     {
-        string url = strBaseURL + "center=" + latitude + "," + longitude +
-            "&zoom=" + zoom.ToString() + "&size=" + mapWidth.ToString() + "x" + mapHeight.ToString()
-            + "&key=" + strAPIKey;   //URL 생성  - 향후 StringBuilder를 이용해 적용.
+        while (true)
+        {
+            string url = strBaseURL + "center=" + latitude + "," + longitude +
+                "&zoom=" + zoom.ToString() + "&size=" + mapWidth.ToString() + "x" + mapHeight.ToString()
+                + "&key=" + strAPIKey;   //URL 생성  - 향후 StringBuilder를 이용해 적용.
 
-        Debug.Log("URL : " + url);
+            Debug.Log("URL : " + url);
 
-        url = UnityWebRequest.UnEscapeURL(url); //Url에 대한  Web 요청
-        UnityWebRequest req = UnityWebRequestTexture.GetTexture(url); //Texture에 대한 요청 
+            url = UnityWebRequest.UnEscapeURL(url); //Url에 대한  Web 요청
+            UnityWebRequest req = UnityWebRequestTexture.GetTexture(url); //Texture에 대한 요청 
 
-        yield return req.SendWebRequest();  //요청 전송
+            yield return req.SendWebRequest();  //요청 전송
 
-        mapRawImage.texture = DownloadHandlerTexture.GetContent(req); // 받은 Texture를 RAW 이미지에 적용
+            mapRawImage.texture = DownloadHandlerTexture.GetContent(req); // 받은 Texture를 RAW 이미지에 적용
+        }
     }
 }
