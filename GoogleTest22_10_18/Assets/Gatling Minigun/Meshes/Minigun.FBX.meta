@@ -1,0 +1,146 @@
+fileFormatVersion: 2
+guid: 19d81c693ce0ddc49a9a77043da92fa7
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Ammobox
+    100002: AmmoBox_Handle_003
+    100004: AmmoBox_Handle_1
+    100006: AmmoBox_Handle_2
+    100008: AmmoBox_Holder
+    100010: Fire_Button
+    100012: Minugun_barrels
+    100014: Minugun_MeshPart0
+    100016: Minugun_MeshPart1
+    100018: Minugun_Ring
+    100020: Start_Button
+    100022: //RootNode
+    400000: Ammobox
+    400002: AmmoBox_Handle_003
+    400004: AmmoBox_Handle_1
+    400006: AmmoBox_Handle_2
+    400008: AmmoBox_Holder
+    400010: Fire_Button
+    400012: Minugun_barrels
+    400014: Minugun_MeshPart0
+    400016: Minugun_MeshPart1
+    400018: Minugun_Ring
+    400020: Start_Button
+    400022: //RootNode
+    2300000: Ammobox
+    2300002: AmmoBox_Handle_003
+    2300004: AmmoBox_Handle_1
+    2300006: AmmoBox_Handle_2
+    2300008: AmmoBox_Holder
+    2300010: Fire_Button
+    2300012: Minugun_barrels
+    2300014: Minugun_MeshPart0
+    2300016: Minugun_MeshPart1
+    2300018: Minugun_Ring
+    2300020: Start_Button
+    2300022: //RootNode
+    3300000: Ammobox
+    3300002: AmmoBox_Handle_003
+    3300004: AmmoBox_Handle_1
+    3300006: AmmoBox_Handle_2
+    3300008: AmmoBox_Holder
+    3300010: Fire_Button
+    3300012: Minugun_barrels
+    3300014: Minugun_MeshPart0
+    3300016: Minugun_MeshPart1
+    3300018: Minugun_Ring
+    3300020: Start_Button
+    3300022: //RootNode
+    4300000: Minugun_MeshPart0
+    4300002: Minugun_MeshPart1
+    4300004: AmmoBox_Holder
+    4300006: Ammobox
+    4300008: AmmoBox_Handle_003
+    4300010: AmmoBox_Handle_2
+    4300012: AmmoBox_Handle_1
+    4300014: Minugun_Ring
+    4300016: Start_Button
+    4300018: Fire_Button
+    4300020: Minugun_barrels
+    4300022: Minugun
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

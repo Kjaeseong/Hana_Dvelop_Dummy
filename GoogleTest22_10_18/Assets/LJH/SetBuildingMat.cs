@@ -85,7 +85,10 @@ namespace Google.Maps.Examples
 
             foreach (var renderer in _mesh)
             {
-                renderer.materials = _mat;
+                if (renderer.gameObject.name[0] != 'S')
+                {
+                    renderer.materials = _mat;
+                }
                 renderer.gameObject.AddComponent<MeshCollider>();
                 renderer.gameObject.AddComponent<NavMeshSourceTag>();
             }

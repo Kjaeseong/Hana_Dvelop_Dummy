@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -340790334, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
+  m_Name: Kikyo_bikini_costume
+  m_EditorClassIdentifier: 
+  controls:
+  - name: "\uBE44\uD0A4\uB2C8 ON"
+    icon: {fileID: 2800000, guid: 82ad105b8bd5f2348afe1ad8f632b5f5, type: 3}
+    type: 102
+    parameter:
+      name: Dress_change
+    value: 3
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: "\uCEA3\uAC00\uD130 OFF"
+    icon: {fileID: 0}
+    type: 102
+    parameter:
+      name: Casual_catgarter
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: "\uAC89\uC637 \uBC14\uAFB8\uAE30"
+    icon: {fileID: 0}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: d1472393f02d06b4e9d30a2a7ae5496c, type: 2}
+    subParameters: []
+    labels: []
+  - name: "\uC0CC\uB4E4 OFF"
+    icon: {fileID: 0}
+    type: 102
+    parameter:
+      name: Shoese
+    value: 4
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: "\uD56B\uD32C\uCE20 OFF"
+    icon: {fileID: 0}
+    type: 102
+    parameter:
+      name: Bikini_hotpants
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []

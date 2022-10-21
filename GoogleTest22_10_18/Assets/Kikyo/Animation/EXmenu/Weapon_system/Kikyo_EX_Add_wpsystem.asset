@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -340790334, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
+  m_Name: Kikyo_EX_Add_wpsystem
+  m_EditorClassIdentifier: 
+  controls:
+  - name: "\uB208 \uD30C\uCE20 \uC870\uC815"
+    icon: {fileID: 2800000, guid: caa207da60c29734dac6da07797e292b, type: 3}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: 02a40b76911b4014a8bd8d6a808ef559, type: 2}
+    subParameters: []
+    labels: []
+  - name: "\uD638\uBC84 \uC124\uC815"
+    icon: {fileID: 0}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: 101d645707ec6be40818cba74fb6c6af, type: 2}
+    subParameters: []
+    labels: []
+  - name: "\uC637\uC7A5"
+    icon: {fileID: 0}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: d1f8bb71c8193a04b917f0a01f53f4b0, type: 2}
+    subParameters: []
+    labels: []
+  - name: "\uC18C\uD488"
+    icon: {fileID: 0}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: 9ab8abcf644d3464fa16c31370a65ff5, type: 2}
+    subParameters: []
+    labels: []

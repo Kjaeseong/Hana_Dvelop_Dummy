@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -340790334, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
+  m_Name: Jersey
+  m_EditorClassIdentifier: 
+  controls:
+  - name: ON
+    icon: {fileID: 0}
+    type: 102
+    parameter:
+      name: Dress_change
+    value: 5
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: "\uC2A4\uB2C8\uCEE4 ON"
+    icon: {fileID: 0}
+    type: 102
+    parameter:
+      name: Shoese
+    value: 6
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: "\uAC89\uC637"
+    icon: {fileID: 0}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: f4818b1baddadac4d8483f144206f1a7, type: 2}
+    subParameters: []
+    labels: []
+  - name: "\uC0C1\uC758"
+    icon: {fileID: 0}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: 0e13c122811631d4eafd4613927ba63e, type: 2}
+    subParameters: []
+    labels: []
+  - name: "\uD558\uC758"
+    icon: {fileID: 0}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: 1a29afebe0be083439f3f8bc06e69f76, type: 2}
+    subParameters: []
+    labels: []
+  - name: "\uC800\uC9C0 \uC545\uC138\uC11C\uB9AC"
+    icon: {fileID: 0}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: 198134896c4e0794da57610ed668d473, type: 2}
+    subParameters: []
+    labels: []
+  - name: "\uB85C\uCEE4 \uD0A4"
+    icon: {fileID: 0}
+    type: 102
+    parameter:
+      name: Rocker_key
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []

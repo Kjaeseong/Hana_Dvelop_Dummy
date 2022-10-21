@@ -26,7 +26,7 @@ namespace Google.Maps.Examples {
         /// </summary>
         private void Start() {
 
-            LatLng = new LatLng(0,0);// (PositionSensor.GetLat(), PositionSensor.GetLong());
+            LatLng = new LatLng(37.539636, 127.123285);// (PositionSensor.GetLat(), PositionSensor.GetLong());
 
             // Get required MapsService component on this GameObject.
             mapsService = GetComponent<MapsService>();

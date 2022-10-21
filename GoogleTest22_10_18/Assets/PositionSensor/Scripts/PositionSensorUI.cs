@@ -12,6 +12,8 @@ public class PositionSensorUI : MonoBehaviour
 
     [SerializeField] private GameObject _map;
 
+    [SerializeField] private Transform _arCameraTransform;
+
     private void Update() 
     {
         TextSet();
@@ -20,15 +22,26 @@ public class PositionSensorUI : MonoBehaviour
 
     public void RotationMap(int num)
     {
-        _map.transform.rotation = Quaternion.Euler(
-            _map.transform.rotation.eulerAngles.x, 
-            _map.transform.rotation.eulerAngles.y + num,
-            _map.transform.rotation.eulerAngles.z);
+        float speed = 50f;
+        _map.transform.RotateAround(_arCameraTransform.position, Vector3.up, speed * num * Time.deltaTime);
+        //_map.transform.rotation = Quaternion.Euler(
+        //    _map.transform.rotation.eulerAngles.x, 
+        //    _map.transform.rotation.eulerAngles.y + num,
+        //    _map.transform.rotation.eulerAngles.z);
     }
 
     public void RotationMapAzimuth()
     {
         _map.transform.rotation = Quaternion.Euler(0f, -1 * (float)_pos.GetAzimuth(), 0f);
+    }
+
+    public void TestRotationMap()
+    {
+        double angle = _pos.GetAzimuth();
+        while(false == (_map.transform.rotation.eulerAngles.y > (360 - angle - 2) % 360 && _map.transform.rotation.eulerAngles.y < (360 - angle + 2) % 360))
+        {
+            _map.transform.RotateAround(_arCameraTransform.position, Vector3.up, 10f * Time.deltaTime);
+        }
     }
 
     public void TextSet()
@@ -46,8 +59,4 @@ public class PositionSensorUI : MonoBehaviour
     {
 
     }
-
-
-
-
 }

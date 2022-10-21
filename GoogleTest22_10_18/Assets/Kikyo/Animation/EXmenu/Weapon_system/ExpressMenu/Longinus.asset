@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -340790334, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
+  m_Name: Longinus
+  m_EditorClassIdentifier: 
+  controls:
+  - name: "\uC7A5\uCC29"
+    icon: {fileID: 0}
+    type: 102
+    parameter:
+      name: Prop
+    value: 3
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: "\uD53D\uC5C5 \uD2B8\uB9AC\uAC70"
+    icon: {fileID: 0}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: 399d3b0e4d08a644ba734f335569ae2d, type: 2}
+    subParameters: []
+    labels: []
+  - name: "\uD55C\uC190"
+    icon: {fileID: 0}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: 6bfe992e4ddeffe41a8eedf051429426, type: 2}
+    subParameters: []
+    labels: []
+  - name: "\uC591\uC190"
+    icon: {fileID: 0}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: 52083eac607bd974080c29fe556a38fd, type: 2}
+    subParameters: []
+    labels: []
+  - name: "\uD2B9\uC218\uAE30\uB2A5"
+    icon: {fileID: 0}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: f3c530e0c79965f4da650657067bd6ee, type: 2}
+    subParameters: []
+    labels: []
+  - name: "\uC2AC\uB86F"
+    icon: {fileID: 0}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: c4c281830d9489546a31a35150d534c2, type: 2}
+    subParameters: []
+    labels: []
+  - name: "\uD578\uB4DC \uC0AC\uC778 \uC124\uC815"
+    icon: {fileID: 0}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: 0690d00743a4f544eafdd7b43ca50619, type: 2}
+    subParameters: []
+    labels: []
