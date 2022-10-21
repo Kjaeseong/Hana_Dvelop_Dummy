@@ -1048,8 +1048,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mesh: []
   _mat:
-  - {fileID: 2100000, guid: 27762ca3f542df94093909fff4d0ef68, type: 2}
-  - {fileID: 2100000, guid: 27762ca3f542df94093909fff4d0ef68, type: 2}
+  - {fileID: 2100000, guid: 1c9442dd5211b324f872612c40f85cd0, type: 2}
+  - {fileID: 2100000, guid: 1c9442dd5211b324f872612c40f85cd0, type: 2}
   _AI_test: {fileID: 6348611037806450371, guid: b252ec68a47c4d542911c5c13e9d2088, type: 3}
   _Position_Test: {fileID: 826676690878647091, guid: 2bfdf38187badd84b9bb4ff7ee3088c0, type: 3}
   _player: {fileID: 1676388350}
@@ -1619,7 +1619,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 1110
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: 6ce47dcab5e0beb41856f591d216150d, type: 2}
   m_TargetDisplay: 0
