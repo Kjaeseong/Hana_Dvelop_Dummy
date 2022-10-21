@@ -8,8 +8,16 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] Button[] _button;
     [SerializeField] GameObject[] _panel;
     [SerializeField] Inventory _inven;
+    [SerializeField] GameObject _hanaChan;
+
+    private Character _character;
 
     private bool _showPanel = false;
+
+    private void Awake()
+    {
+        _character = _hanaChan.GetComponent<Character>();
+    }
 
     private void Start()
     {
@@ -50,7 +58,7 @@ public class InventoryManager : MonoBehaviour
         if (_inven.ItemInInventory[index].ItemCount >= 1)
         {
             --_inven.ItemInInventory[index].ItemCount;
-            // TODO: 아이템 사용효과
+            _character.ReceivePresent(_inven.ItemInInventory[index].name);
         }
 
         if(_inven.ItemInInventory[index].ItemCount == 0)

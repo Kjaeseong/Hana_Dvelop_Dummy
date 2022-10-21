@@ -493,7 +493,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 478764860}
+      - m_Target: {fileID: 4045977591303618536}
         m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
         m_MethodName: ShowPanel
         m_Mode: 3
@@ -625,7 +625,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 478764860}
+      - m_Target: {fileID: 4045977591303618536}
         m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
         m_MethodName: DeleteItem
         m_Mode: 3
@@ -637,7 +637,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 478764860}
+      - m_Target: {fileID: 4045977591303618536}
         m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
         m_MethodName: ShowPanel
         m_Mode: 3
@@ -771,7 +771,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 478764860}
+      - m_Target: {fileID: 4045977591303618536}
         m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
         m_MethodName: ShowPanel
         m_Mode: 3
@@ -1138,7 +1138,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 478764860}
+      - m_Target: {fileID: 4045977591303618536}
         m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
         m_MethodName: UseItem
         m_Mode: 3
@@ -1150,7 +1150,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 478764860}
+      - m_Target: {fileID: 4045977591303618536}
         m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
         m_MethodName: ShowPanel
         m_Mode: 3
@@ -1252,13 +1252,14 @@ GameObject:
   - component: {fileID: 8899478376580601354}
   - component: {fileID: 8899478376580601352}
   - component: {fileID: 8899478376580601355}
+  - component: {fileID: 4045977591303618536}
   m_Layer: 5
   m_Name: InventoryPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8899478376580601354
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1319,6 +1320,38 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4045977591303618536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8899478376580601357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18e3784ae9555e48bbbcf0fb4961b76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _button:
+  - {fileID: 8899478377386391385}
+  - {fileID: 8899478377026533253}
+  - {fileID: 8899478378249811144}
+  - {fileID: 8899478376231323135}
+  - {fileID: 8899478376173758632}
+  - {fileID: 8899478376623653479}
+  - {fileID: 8899478377386079433}
+  - {fileID: 8899478377083396260}
+  _panel:
+  - {fileID: 8899478376300107474}
+  - {fileID: 8899478377960209152}
+  - {fileID: 8899478377114753211}
+  - {fileID: 8899478376753318358}
+  - {fileID: 8899478377467143747}
+  - {fileID: 8899478377483437667}
+  - {fileID: 8899478377894822170}
+  - {fileID: 8899478376762457398}
+  _inven: {fileID: 0}
+  _hanaChan: {fileID: 0}
 --- !u!1 &8899478376623653497
 GameObject:
   m_ObjectHideFlags: 0
@@ -1441,7 +1474,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 478764860}
+      - m_Target: {fileID: 4045977591303618536}
         m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
         m_MethodName: ShowPanel
         m_Mode: 3
@@ -1573,7 +1606,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 478764860}
+      - m_Target: {fileID: 4045977591303618536}
         m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
         m_MethodName: DeleteItem
         m_Mode: 3
@@ -1585,7 +1618,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 478764860}
+      - m_Target: {fileID: 4045977591303618536}
         m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
         m_MethodName: ShowPanel
         m_Mode: 3
@@ -1871,7 +1904,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 478764860}
+      - m_Target: {fileID: 4045977591303618536}
         m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
         m_MethodName: UseItem
         m_Mode: 3
@@ -1883,7 +1916,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 478764860}
+      - m_Target: {fileID: 4045977591303618536}
         m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
         m_MethodName: ShowPanel
         m_Mode: 3
@@ -2094,7 +2127,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 478764860}
+      - m_Target: {fileID: 4045977591303618536}
         m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
         m_MethodName: UseItem
         m_Mode: 3
@@ -2106,7 +2139,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 478764860}
+      - m_Target: {fileID: 4045977591303618536}
         m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
         m_MethodName: ShowPanel
         m_Mode: 3
@@ -2240,7 +2273,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 478764860}
+      - m_Target: {fileID: 4045977591303618536}
         m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
         m_MethodName: ShowPanel
         m_Mode: 3
@@ -2372,7 +2405,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 478764860}
+      - m_Target: {fileID: 4045977591303618536}
         m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
         m_MethodName: UseItem
         m_Mode: 3
@@ -2384,7 +2417,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 478764860}
+      - m_Target: {fileID: 4045977591303618536}
         m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
         m_MethodName: ShowPanel
         m_Mode: 3
@@ -2518,7 +2551,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 478764860}
+      - m_Target: {fileID: 4045977591303618536}
         m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
         m_MethodName: ShowPanel
         m_Mode: 3
@@ -2727,7 +2760,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 478764860}
+      - m_Target: {fileID: 4045977591303618536}
         m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
         m_MethodName: DeleteItem
         m_Mode: 3
@@ -2739,7 +2772,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 478764860}
+      - m_Target: {fileID: 4045977591303618536}
         m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
         m_MethodName: ShowPanel
         m_Mode: 3
@@ -2873,7 +2906,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 478764860}
+      - m_Target: {fileID: 4045977591303618536}
         m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
         m_MethodName: ShowPanel
         m_Mode: 3
@@ -3007,7 +3040,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 478764860}
+      - m_Target: {fileID: 4045977591303618536}
         m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
         m_MethodName: ShowPanel
         m_Mode: 3
@@ -3031,7 +3064,6 @@ GameObject:
   - component: {fileID: 8899478377412468396}
   - component: {fileID: 8899478377412468399}
   - component: {fileID: 8899478377412468398}
-  - component: {fileID: 478764860}
   m_Layer: 5
   m_Name: InventoryUI
   m_TagString: Untagged
@@ -3121,37 +3153,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &478764860
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8899478377412468385}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18e3784ae9555e48bbbcf0fb4961b76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _button:
-  - {fileID: 8899478377386391385}
-  - {fileID: 8899478377026533253}
-  - {fileID: 8899478378249811144}
-  - {fileID: 8899478376231323135}
-  - {fileID: 8899478376173758632}
-  - {fileID: 8899478376623653479}
-  - {fileID: 8899478377386079433}
-  - {fileID: 8899478377083396260}
-  _panel:
-  - {fileID: 8899478376300107474}
-  - {fileID: 8899478377960209152}
-  - {fileID: 8899478377114753211}
-  - {fileID: 8899478376753318358}
-  - {fileID: 8899478377467143747}
-  - {fileID: 8899478377483437667}
-  - {fileID: 8899478377894822170}
-  - {fileID: 8899478376762457398}
-  _inven: {fileID: 0}
 --- !u!1 &8899478377417903634
 GameObject:
   m_ObjectHideFlags: 0
@@ -3584,7 +3585,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 478764860}
+      - m_Target: {fileID: 4045977591303618536}
         m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
         m_MethodName: UseItem
         m_Mode: 3
@@ -3596,7 +3597,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 478764860}
+      - m_Target: {fileID: 4045977591303618536}
         m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
         m_MethodName: ShowPanel
         m_Mode: 3
@@ -3728,7 +3729,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 478764860}
+      - m_Target: {fileID: 4045977591303618536}
         m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
         m_MethodName: UseItem
         m_Mode: 3
@@ -3740,7 +3741,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 478764860}
+      - m_Target: {fileID: 4045977591303618536}
         m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
         m_MethodName: ShowPanel
         m_Mode: 3
@@ -3872,7 +3873,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 478764860}
+      - m_Target: {fileID: 4045977591303618536}
         m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
         m_MethodName: DeleteItem
         m_Mode: 3
@@ -3884,7 +3885,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 478764860}
+      - m_Target: {fileID: 4045977591303618536}
         m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
         m_MethodName: ShowPanel
         m_Mode: 3
@@ -4016,7 +4017,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 478764860}
+      - m_Target: {fileID: 4045977591303618536}
         m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
         m_MethodName: DeleteItem
         m_Mode: 3
@@ -4028,7 +4029,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 478764860}
+      - m_Target: {fileID: 4045977591303618536}
         m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
         m_MethodName: ShowPanel
         m_Mode: 3
@@ -4316,7 +4317,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 478764860}
+      - m_Target: {fileID: 4045977591303618536}
         m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
         m_MethodName: UseItem
         m_Mode: 3
@@ -4328,7 +4329,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 478764860}
+      - m_Target: {fileID: 4045977591303618536}
         m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
         m_MethodName: ShowPanel
         m_Mode: 3
@@ -4539,7 +4540,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 478764860}
+      - m_Target: {fileID: 4045977591303618536}
         m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
         m_MethodName: UseItem
         m_Mode: 3
@@ -4551,7 +4552,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 478764860}
+      - m_Target: {fileID: 4045977591303618536}
         m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
         m_MethodName: ShowPanel
         m_Mode: 3
@@ -4839,7 +4840,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 478764860}
+      - m_Target: {fileID: 4045977591303618536}
         m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
         m_MethodName: DeleteItem
         m_Mode: 3
@@ -4851,7 +4852,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 478764860}
+      - m_Target: {fileID: 4045977591303618536}
         m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
         m_MethodName: ShowPanel
         m_Mode: 3
@@ -4983,7 +4984,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 478764860}
+      - m_Target: {fileID: 4045977591303618536}
         m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
         m_MethodName: DeleteItem
         m_Mode: 3
@@ -4995,7 +4996,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 478764860}
+      - m_Target: {fileID: 4045977591303618536}
         m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
         m_MethodName: ShowPanel
         m_Mode: 3
@@ -5127,7 +5128,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 478764860}
+      - m_Target: {fileID: 4045977591303618536}
         m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
         m_MethodName: DeleteItem
         m_Mode: 3
@@ -5139,7 +5140,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 478764860}
+      - m_Target: {fileID: 4045977591303618536}
         m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
         m_MethodName: ShowPanel
         m_Mode: 3
@@ -5316,7 +5317,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 478764860}
+      - m_Target: {fileID: 4045977591303618536}
         m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
         m_MethodName: ShowPanel
         m_Mode: 3
