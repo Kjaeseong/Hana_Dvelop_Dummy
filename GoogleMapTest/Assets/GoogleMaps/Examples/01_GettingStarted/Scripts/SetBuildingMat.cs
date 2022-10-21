@@ -23,6 +23,9 @@ namespace Google.Maps.Examples
         [SerializeField]
         private GameObject _Position_Test;
 
+        [SerializeField]
+        private GameObject _location_Test;
+
         // 목적지가 생성되는 시간, AI가 생성되는 시간 변수
         private int _count = 1;
         private int _countTime = 1;
@@ -40,6 +43,7 @@ namespace Google.Maps.Examples
 
         // 목적지 건물에 해당하는 이름
         public string[] Destination_Name;
+        public string Location_Name;
 
         // 첫 번째 로케이션에 해당하는 건물 좌표
         public float Destination_Lat;
@@ -54,13 +58,13 @@ namespace Google.Maps.Examples
         private void Update()
         {
             _elapsedTime += Time.deltaTime;
-            if (_elapsedTime > 2f && _count != 0)
+            if (_elapsedTime > 1f && _count != 0)
             {
-                GameObject AI = Instantiate(_AI_test, new Vector3(0, 0, 0), Quaternion.identity);
+                GameObject AI = Instantiate(_AI_test, new Vector3(100, 0.5f, -120), Quaternion.identity);
                 _ai_Navitest = AI.GetComponent<AI_NaviTest>();
                 _count--;
             }
-            if (_elapsedTime > 4f && _countTime != 0)
+            if (_elapsedTime > 2f && _countTime != 0)
             {
                 FindBuilding();
                 _countTime--;
@@ -105,8 +109,8 @@ namespace Google.Maps.Examples
                 Testbuilding1018[i] = GameObject.Find(Destination_Name[i]);
                 TestBuildingPos1018[i] = Testbuilding1018[i].transform.position;
 
-                _ai_Navitest.TestDestination = Instantiate(_Position_Test, new Vector3(TestBuildingPos1018[i].x -
-                    _coord_x_Control, _basePlateHigh, TestBuildingPos1018[i].z), Quaternion.identity);
+                _ai_Navitest.TestDestination = Instantiate(_Position_Test, new Vector3(TestBuildingPos1018[i].x +
+                    130, _basePlateHigh, TestBuildingPos1018[i].z - 35), Quaternion.identity);
             }
 
             //------------------------------------------------------------------------------------------------------
@@ -125,6 +129,9 @@ namespace Google.Maps.Examples
             //_ai_Navitest.TestDestination = Instantiate(_Position_Test, new Vector3(TestBuildingPos.x - _coord_x_Control, _basePlateHigh, TestBuildingPos.z - _coord_z_Control),
             //    Quaternion.identity);
 
+            GameObject BuildingForLocation = GameObject.Find(Location_Name);
+            Vector3 LocationPos = BuildingForLocation.transform.position;
+            Instantiate(_location_Test, new Vector3(LocationPos.x + 100f, 0.5f, LocationPos.z - 80f), Quaternion.Euler(0, 21, 0));
         }
     }
 }
