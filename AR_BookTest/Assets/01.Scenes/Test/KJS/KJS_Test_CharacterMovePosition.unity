@@ -624,7 +624,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _player: {fileID: 508641581}
   _target: {fileID: 0}
-  _checkCycle: 0.2
+  _checkCycle: 0.5
 --- !u!4 &596417447
 Transform:
   m_ObjectHideFlags: 0
